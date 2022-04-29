@@ -17,16 +17,15 @@ public:
     }
     
     vector<int> withdraw(int amount) {
-        int u = amount;
         vector<int> ans(5);
 
         for (int i = 4; ~i; i--) {
-            int take = min<long long>(bank[i], u / convert[i]);
-            u -= take * convert[i];
+            int take = min<long long>(bank[i], amount / convert[i]);
+            amount -= take * convert[i];
             ans[i] = take;
         }
 
-        if (u) return {-1};
+        if (amount) return {-1};
 
         for (int i = 0; i < 5; i++) bank[i] -= ans[i];
         return ans;
