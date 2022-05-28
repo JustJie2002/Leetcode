@@ -123,3 +123,26 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+class Solution {
+public:
+    long long maximumImportance(int n, vector<vector<int>>& roads) {
+        vi edges(n);
+        Each(road, roads) {
+            int a = road[0], b = road[1];
+            ++edges[a];
+            ++edges[b];
+        }
+        vi val(n);
+        vpi e;
+        for (int i = 0; i < n; i++) {
+            e.eb(edges[i], i);
+        }
+        sort(all(e));
+        for (int i = n; i; i--) {
+            val[e[i - 1].se] = i;
+        }
+        ll tot = 0;
+        for (int i = 0; i < n; i++) tot += (ll) edges[i] * val[i];
+        return tot;
+    }
+};

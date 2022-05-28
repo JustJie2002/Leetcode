@@ -123,3 +123,14 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+class Solution {
+public:
+    bool digitCount(string num) {
+        map<int, int> c;
+        for (char ch : num) ++c[ch - '0'];
+        for (int i = 0; i < sz(num); i++) {
+            if (c[i] != (num[i] - '0')) return false;
+        }
+        return true;
+    }
+};

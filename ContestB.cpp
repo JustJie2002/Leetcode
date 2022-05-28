@@ -123,3 +123,32 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+int Split(const string& word) {
+    int c = 1;
+    string p = "";
+    for (char ch : word) {
+        if (isspace(ch)) {
+            if (p != "") ++c;
+            p.clear();
+        } 
+        else
+            p += ch;
+    }
+    return c;
+}
+
+class Solution {
+public:
+    string largestWordCount(vector<string>& messages, vector<string>& senders) {
+        int n = sz(messages);
+        map<string, int> m;
+        for (int i = 0; i < n; i++) {
+            m[senders[i]] += Split(messages[i]);
+        }
+        string ans = "";
+        for (auto &[n, c] : m) {
+            if (c >= m[ans]) ans = n;
+        }
+        return ans;
+    }
+};
