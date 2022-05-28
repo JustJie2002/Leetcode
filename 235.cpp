@@ -105,7 +105,6 @@ template <typename T> using graph = vector<vector<T>>;
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
 #define sz(a) int(a.size())
-#define Each(x, a) for (auto& x : a)
 
 constexpr int inf = 1E9;
 constexpr ll INF = 1E18;
@@ -123,3 +122,32 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        int a = p->val, b = q->val;
+        if (a > b) swap(a, b);
+        while (root) {
+            int x = root->val;
+            if (b > x && x > a)
+                return root;
+            if (b > x && a > x)
+                root = root->right;
+            else if (b < x && a < x)
+                root = root->left;
+            else
+                return root;
+        }
+        assert(false);
+    }
+};

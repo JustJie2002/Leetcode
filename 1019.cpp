@@ -105,7 +105,6 @@ template <typename T> using graph = vector<vector<T>>;
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
 #define sz(a) int(a.size())
-#define Each(x, a) for (auto& x : a)
 
 constexpr int inf = 1E9;
 constexpr ll INF = 1E18;
@@ -123,3 +122,34 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> nextLargerNodes(ListNode* head) {
+        stack<int> st;
+        vi ans, val;
+        for (int i = 0; head; head = head->next, ++i) {
+            ans.pb(-1);
+            val.pb(head->val);
+            while (!st.empty() && val[st.top()] < val[i]) {
+                ans[st.top()] = val[i];
+                st.pop();
+            }
+            st.push(i);
+        }
+        while (!st.empty()) {
+            ans[st.top()] = 0;
+            st.pop();
+        }
+        return ans;
+    }
+};

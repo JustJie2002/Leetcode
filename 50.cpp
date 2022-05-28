@@ -123,3 +123,16 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+class Solution {
+public:
+    double myPow(double x, ll n) {
+        if (n == 0) return 1.;
+        if (n == 1) return x;
+        if (n < 0) return 1. / myPow(x, -n);
+        ll mid = n / 2;
+        double center = myPow(x, mid);
+        if (n & 1)
+            return center * (center * x);
+        return center * center;
+    }
+};

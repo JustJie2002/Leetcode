@@ -105,7 +105,6 @@ template <typename T> using graph = vector<vector<T>>;
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
 #define sz(a) int(a.size())
-#define Each(x, a) for (auto& x : a)
 
 constexpr int inf = 1E9;
 constexpr ll INF = 1E18;
@@ -123,3 +122,30 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* sortedArrayToBST(vector<int>& a) {
+        int n = sz(a);
+        if (n == 0) return nullptr;
+        if (n == 1) return new TreeNode(a[0]);
+        int pivot = a[n / 2];
+        TreeNode* Root = new TreeNode(pivot);
+        vi left, right;
+        for (int i = 0; i < n / 2; i++) left.pb(a[i]);
+        for (int i = n / 2 + 1; i < n; i++) right.pb(a[i]);
+        Root->left = sortedArrayToBST(left);
+        Root->right = sortedArrayToBST(right);
+        return Root;
+    }
+};

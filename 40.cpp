@@ -123,3 +123,40 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+class Solution {
+private:
+    set<vi> ans;
+    vi bucket, a;
+    int t;
+    bool vis[110][5050];
+    void dfs(int i, int sum = 0) {
+        if (vis[i][sum]) return;
+        if (i == sz(a)) return;
+        vis[i][sum] = true;
+        sum += a[i];
+        bucket.pb(a[i]);
+        bool removed = false;
+        if (sum == t)
+            ans.ins(bucket);
+        else if (sum > t) {
+            removed = true;
+            bucket.pop_back();
+            sum -= a[i];
+            dfs(i + 1, sum);
+        }
+        dfs(i + 1, sum);
+        if (!removed) {
+            bucket.pop_back();
+            dfs(i + 1, sum - a[i]);
+        }
+    }
+public:
+    vvi combinationSum2(vi& candidates, int target) {
+        sort(all(candidates));
+        memset(vis, false, sizeof vis);
+        a = candidates;
+        t = target;
+        dfs(0);
+        return vvi(all(ans));
+    }
+};
