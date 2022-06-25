@@ -93,6 +93,7 @@ using vvi = vector<vi>;
 using vs = vector<string>;
 using vpi = vector<pii>;
 using vl = vector<ll>;
+using vb = vector<bool>;
 template <typename A, typename B> using wgraph = vector<vector<pair<A, B>>>;
 template <typename T> using graph = vector<vector<T>>;
 
@@ -123,104 +124,18 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
-struct node {
-    ll sum; 
-    int maxv;
-};
-
-node combine(node a, node b) {
-    return {
-        a.sum + b.sum,
-        max(a.maxv, b.maxv)
-    };
-}
-
-typedef node T;
-struct SegTree {
-private:
-    const T base{0, 0}; // define base
-    int n;
-    vector<T> s;
-    T f(T a, T b) { return combine(a, b); }
-
+class Solution {
 public:
-    SegTree(int _n) : n(_n) {
-        s.resize(2 * n, base);
-    }
-    
-    void update(int pos, T val) {
-        for (s[pos += n] = val; pos >>= 1;)
-            s[pos] = f(s[pos << 1], s[(pos << 1) + 1]);
-    }
-    
-    T query(int b, int e) {
-        ++e;
-        T ra = base, rb = base;
-        for (b += n, e += n; b < e; b >>= 1, e >>= 1) {
-            if (b & 1) ra = f(ra, s[b++]);
-            if (e & 1) rb = f(s[--e], rb);
+    long long countSubarrays(vector<int>& nums, long long k) {
+        int n = sz(nums);
+        ll ans = 0;
+        ll l = 0;
+        ll sum = 0;
+        for (int r = 0; r < n; r++) {
+            sum += nums[r];
+            while (sum * (r - l + 1) >= k) sum -= nums[l++];
+            ans += (r - l + 1);
         }
-        return f(ra, rb);
+        return ans;
     }
 };
-
-class BookMyShow {
-    SegTree seg;
-    int n, m;
-    int l = 0;
-public:
-    BookMyShow(int n, int _m) : n(n), m(_m), seg(n) {
-        for (int i = 0; i < n; i++) seg.update(i, {m, m});
-    }
-    
-    vector<int> gather(int k, int maxRow) {
-        int lo = l, hi = maxRow, ans = -1;
-        while (lo <= hi) {
-            int mid = lo + (hi - lo) / 2;
-            T info = seg.query(lo, mid);
-            if (info.maxv >= k) {
-                hi = mid - 1;
-                ans = mid;
-            } else {
-                lo = mid + 1;
-            }
-        }
-        if (ans == -1)
-            return {};
-        T info = seg.query(ans, ans);
-        seg.update(ans, {info.sum - k, info.maxv - k});
-        int nsum = m - info.sum;
-        return {ans, nsum};
-    }
-    
-    bool scatter(ll k, int maxRow) {
-        int lo = l, hi = maxRow, ans = -1;
-        while (lo <= hi) {
-            int mid = lo + (hi - lo) / 2;
-            T info = seg.query(0, mid);
-            if (info.sum >= k) {
-                hi = mid - 1;
-                ans = mid;
-            } else {
-                lo = mid + 1;
-            }
-        }
-        if (ans == -1)
-            return false;
-        for (int i = l; i <= ans && k; i++) {
-            T info = seg.query(i, i);
-            int need = min(k, info.sum);
-            seg.update(i, {info.sum - need, info.maxv - need});
-            if (info.sum - need == 0) ++l;
-            k -= need;
-        }
-        return true;
-    }
-};
-
-/**
- * Your BookMyShow object will be instantiated and called as such:
- * BookMyShow* obj = new BookMyShow(n, m);
- * vector<int> param_1 = obj->gather(k,maxRow);
- * bool param_2 = obj->scatter(k,maxRow);
- */

@@ -93,6 +93,7 @@ using vvi = vector<vi>;
 using vs = vector<string>;
 using vpi = vector<pii>;
 using vl = vector<ll>;
+using vb = vector<bool>;
 template <typename A, typename B> using wgraph = vector<vector<pair<A, B>>>;
 template <typename T> using graph = vector<vector<T>>;
 
@@ -123,26 +124,20 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+
 class Solution {
 public:
-    long long maximumImportance(int n, vector<vector<int>>& roads) {
-        vi edges(n);
-        Each(road, roads) {
-            int a = road[0], b = road[1];
-            ++edges[a];
-            ++edges[b];
+    bool matchReplacement(string s, string sub, vector<vector<char>>& mappings) {
+        int n = sz(s), m = sz(sub);
+        bool convert[256][256] = {};
+        for (int i = 0; i < 256; i++) convert[i][i] = true;
+        Each(w, mappings) convert[w[0]][w[1]] = true;
+        for (int i = 0; i + m - 1 < n; i++) {
+            bool same = true;
+            for (int j = 0; j < m && same; j++)
+                same &= convert[sub[j]][s[i + j]];
+            if (same) return true;
         }
-        vi val(n);
-        vpi e;
-        for (int i = 0; i < n; i++) {
-            e.eb(edges[i], i);
-        }
-        sort(all(e));
-        for (int i = n; i; i--) {
-            val[e[i - 1].se] = i;
-        }
-        ll tot = 0;
-        for (int i = 0; i < n; i++) tot += (ll) edges[i] * val[i];
-        return tot;
+        return false;
     }
 };

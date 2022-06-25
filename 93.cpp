@@ -93,7 +93,6 @@ using vvi = vector<vi>;
 using vs = vector<string>;
 using vpi = vector<pii>;
 using vl = vector<ll>;
-using vb = vector<bool>;
 template <typename A, typename B> using wgraph = vector<vector<pair<A, B>>>;
 template <typename T> using graph = vector<vector<T>>;
 
@@ -125,16 +124,25 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 */
 
 class Solution {
-public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
-        for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
+    unordered_set<string> distinct;
+    inline void dfs(string s, string address = "", int sections = 0) {
+        if (sections == 4) {
+            if (s == "") distinct.insert(address);
+            return;
         }
-        return ans;
+        string add = "";
+        for (int i = 0; i < min(3, int(s.size())); i++) {
+            add += s[i];
+            if (stoi(add) > 255 || (s[0] == '0' && i)) break;
+            if (address.empty())
+                dfs(s.substr(i + 1), add, sections + 1);
+            else
+                dfs(s.substr(i + 1), address + "." + add, sections + 1);
+        }
+    }
+public:
+    vector<string> restoreIpAddresses(string s) {
+        dfs(s);
+        return vector<string>(distinct.begin(), distinct.end());
     }
 };

@@ -126,15 +126,20 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 
 class Solution {
 public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
-        for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
+    int numberOfWays(string corridor) {
+        int n = sz(corridor);
+        vi loc;
+        for (int i = 0; i < n; i++)
+            if (corridor[i] == 'S') loc.pb(i);
+        int m = sz(loc);
+        // if there's odd # of seats, then we can't do anything
+        if (m & 1 || m < 2) return 0;
+        ll p = 1;
+        for (int i = 1; i < m - 2; i += 2) {
+            ll d = loc[i + 1] - loc[i];
+            p *= d;
+            p %= mod;
         }
-        return ans;
+        return p;
     }
 };

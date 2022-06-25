@@ -126,15 +126,7 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 
 class Solution {
 public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
-        for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
-        }
-        return ans;
+    int compareVersion(string version1, string version2) {
+        
     }
 };

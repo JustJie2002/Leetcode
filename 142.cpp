@@ -124,17 +124,33 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
-        for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
+    ListNode *detectCycle(ListNode *head) {
+        if (head == nullptr || head->next == nullptr) return nullptr;
+        ListNode *slow = head;
+        ListNode *fast = head;
+        ListNode *entr = head;
+        // tortoise and hare algorithm
+        while (fast->next && fast->next->next) {
+            slow = slow->next;
+            fast = fast->next->next;
+            if (slow == fast) {
+                while (slow != entr) {
+                    slow = slow->next;
+                    entr = entr->next;
+                }
+                return entr;
+            }
         }
-        return ans;
+        return nullptr;
     }
 };

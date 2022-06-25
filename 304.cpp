@@ -93,7 +93,6 @@ using vvi = vector<vi>;
 using vs = vector<string>;
 using vpi = vector<pii>;
 using vl = vector<ll>;
-using vb = vector<bool>;
 template <typename A, typename B> using wgraph = vector<vector<pair<A, B>>>;
 template <typename T> using graph = vector<vector<T>>;
 
@@ -124,17 +123,28 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 	* don't be lazy, write out your thought and code it out
 */
 
-class Solution {
+class NumMatrix {
+private:
+    vvi dp;
+    
 public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
+    NumMatrix(vector<vector<int>>& matrix) {
+        int n = sz(matrix), m = sz(matrix[0]);
+        dp.resize(n + 1, vi(m + 1));
         for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
+            for (int j = 0; j < m; j++) {
+                dp[i + 1][j + 1] = dp[i + 1][j] + dp[i][j + 1] - dp[i][j] + matrix[i][j];
+            }
         }
-        return ans;
+    }
+    
+    int sumRegion(int row1, int col1, int row2, int col2) {
+        return dp[row2 + 1][col2 + 1] - dp[row2 + 1][col1] - dp[row1][col2 + 1] + dp[row1][col1];
     }
 };
+
+/**
+ * Your NumMatrix object will be instantiated and called as such:
+ * NumMatrix* obj = new NumMatrix(matrix);
+ * int param_1 = obj->sumRegion(row1,col1,row2,col2);
+ */

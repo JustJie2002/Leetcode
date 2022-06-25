@@ -93,6 +93,7 @@ using vvi = vector<vi>;
 using vs = vector<string>;
 using vpi = vector<pii>;
 using vl = vector<ll>;
+using vb = vector<bool>;
 template <typename A, typename B> using wgraph = vector<vector<pair<A, B>>>;
 template <typename T> using graph = vector<vector<T>>;
 
@@ -125,12 +126,7 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 
 class Solution {
 public:
-    bool digitCount(string num) {
-        map<int, int> c;
-        for (char ch : num) ++c[ch - '0'];
-        for (int i = 0; i < sz(num); i++) {
-            if (c[i] != (num[i] - '0')) return false;
-        }
-        return true;
+    bool strongPasswordCheckerII(string password) {
+        
     }
 };

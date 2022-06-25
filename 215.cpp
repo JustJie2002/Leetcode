@@ -82,17 +82,17 @@ void debug_out(Head H, Tail... T) {
 
 #define debug(...) cout << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
 
-typedef long long ll;
+typedef long long i64;
 typedef double db;
 typedef pair<int, int> pii;
-typedef pair<ll, int> pli;
-typedef pair<ll, ll> pll;
+typedef pair<i64, int> pli;
+typedef pair<i64, i64> pll;
 typedef long double ld;
 using vi = vector<int>;
 using vvi = vector<vi>;
 using vs = vector<string>;
 using vpi = vector<pii>;
-using vl = vector<ll>;
+using vl = vector<i64>;
 using vb = vector<bool>;
 template <typename A, typename B> using wgraph = vector<vector<pair<A, B>>>;
 template <typename T> using graph = vector<vector<T>>;
@@ -106,12 +106,13 @@ template <typename T> using graph = vector<vector<T>>;
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
 #define sz(a) int(a.size())
-#define Each(x, a) for (auto& x : a)
+#define each(x, a) for (auto& x : a)
 
-constexpr int inf = 1E9;
-constexpr ll INF = 1E18;
+constexpr int inf = 1E9 + 5;
+constexpr i64 INF = 1E18;
 constexpr int mod = 1000000007; // 998244353
 const ld pi = acos((ld)-1);
+const double EPS = 1E-6;
 
 template <typename T> bool ckmax(T &a, T b) { return a < b ? a = b, true : false; }
 template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false; }
@@ -126,15 +127,39 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 
 class Solution {
 public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
-        for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
+    vi a;
+    int findKthLargest(vector<int>& nums, int k) {
+        // quick select algorithm
+        a = nums;
+        int n = sz(a);
+        return quickselect(0, n - 1, n - k);
+    }
+    
+    inline int partition(int Left, int Right, int x) {
+        int pivot = a[x];
+        swap(a[Right], a[x]);
+        
+        int ai = Left;
+        for (int i = Left; i < Right; i++) {
+            if (a[i] < pivot) swap(a[i], a[ai]), ++ai;
         }
-        return ans;
+        swap(a[ai], a[Right]);
+        return ai;
+    }
+    
+    inline int quickselect(int Left, int Right, int k) {
+        if (Left == Right) 
+            return a[Left];
+        
+        int x = partition(Left, Right, Left);
+        
+        if (x == k)
+            return a[x];
+            
+        if (k > x)
+            return quickselect(x + 1, Right, k);
+        else
+            return quickselect(Left, x - 1, k);
+        assert(false);
     }
 };

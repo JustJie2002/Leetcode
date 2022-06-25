@@ -1,24 +1,24 @@
 template <typename A, typename B>
 string to_string(pair<A, B> p);
- 
+
 template <typename A, typename B, typename C>
 string to_string(tuple<A, B, C> p);
- 
+
 template <typename A, typename B, typename C, typename D>
 string to_string(tuple<A, B, C, D> p);
- 
+
 string to_string(const string& s) {
     return '"' + s + '"';
 }
- 
+
 string to_string(const char* s) {
     return to_string((string) s);
 }
- 
+
 string to_string(bool b) {
     return (b ? "true" : "false");
 }
- 
+
 string to_string(vector<bool> v) {
     bool first = true;
     string res = "{";
@@ -32,7 +32,7 @@ string to_string(vector<bool> v) {
     res += "}";
     return res;
 }
- 
+
 template <size_t N>
 string to_string(bitset<N> v) {
     string res = "";
@@ -41,7 +41,7 @@ string to_string(bitset<N> v) {
     }
     return res;
 }
- 
+
 template <typename A>
 string to_string(A v) {
     bool first = true;
@@ -56,24 +56,24 @@ string to_string(A v) {
     res += "}";
     return res;
 }
- 
+
 template <typename A, typename B>
 string to_string(pair<A, B> p) {
     return "(" + to_string(p.first) + ", " + to_string(p.second) + ")";
 }
- 
+
 template <typename A, typename B, typename C>
 string to_string(tuple<A, B, C> p) {
     return "(" + to_string(get<0>(p)) + ", " + to_string(get<1>(p)) + ", " + to_string(get<2>(p)) + ")";
 }
- 
+
 template <typename A, typename B, typename C, typename D>
 string to_string(tuple<A, B, C, D> p) {
     return "(" + to_string(get<0>(p)) + ", " + to_string(get<1>(p)) + ", " + to_string(get<2>(p)) + ", " + to_string(get<3>(p)) + ")";
 }
- 
+
 void debug_out() { cout << endl; }
- 
+
 template <typename Head, typename... Tail>
 void debug_out(Head H, Tail... T) {
     cout << " " << to_string(H);
@@ -88,35 +88,35 @@ typedef pair<int, int> pii;
 typedef pair<ll, int> pli;
 typedef pair<ll, ll> pll;
 typedef long double ld;
-using vi = vector<int>;
-using vvi = vector<vi>;
-using vs = vector<string>;
-using vpi = vector<pii>;
-using vl = vector<ll>;
-using vb = vector<bool>;
-template <typename A, typename B> using wgraph = vector<vector<pair<A, B>>>;
-template <typename T> using graph = vector<vector<T>>;
 
 #define pb push_back
-#define mp make_pair
 #define eb emplace_back
 #define ins insert
 #define fi first
 #define se second
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
+#define rev(a) std::reverse(all(a))
 #define sz(a) int(a.size())
-#define Each(x, a) for (auto& x : a)
+#define each(x, a) for (auto& x : a)
 
-constexpr int inf = 1E9;
+// credit: William Lin
+#define FOR(i, a, b, s) for (int i = (a); (s) > 0 ? i < (b) : i > (b); i += (s))
+#define FOR1(e) FOR(_, 0, e, 1)
+#define FOR2(i, e) FOR(i, 0, e, 1)
+#define FOR3(i, b, e) FOR(i, b, e, 1)
+#define FOR4(i, b, e, s) FOR(i, b, e, s)
+#define GET5(a, b, c, d, e, ...) e
+#define FORC(...) GET5(__VA_ARGS__, FOR4, FOR3, FOR2, FOR1)
+#define loop(...) FORC(__VA_ARGS__)(__VA_ARGS__)
+
+constexpr int inf = 1E9 + 5;
 constexpr ll INF = 1E18;
 constexpr int mod = 1000000007; // 998244353
 const ld pi = acos((ld)-1);
+const double EPS = 1E-6;
 
-template <typename T> bool ckmax(T &a, T b) { return a < b ? a = b, true : false; }
-template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false; }
-
-/* stuff you should look for 
+/* stuff you should look for
 	* check for int overflow
 	* check for time complexity (make sure not to TLE)
 	* special case (n = 1)
@@ -126,15 +126,51 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 
 class Solution {
 public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
-        for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
+    vector<string> fullJustify(vector<string>& words, int maxWidth) {
+        vector<string> ans, bucket;
+        vector<vector<string>> buckets;
+        vector<int> lens;
+        int cur = 0;
+        words.pb(string(maxWidth+1, 'z'));
+        each(word, words) {
+            if (cur + sz(bucket) + sz(word) > maxWidth) {
+                buckets.pb(bucket);
+                lens.pb(cur);
+                bucket.clear();
+                cur = 0;
+            }
+            bucket.pb(word);
+            cur += sz(word);
         }
+        loop(i, sz(buckets)-1) ans.pb(convert(buckets[i], lens[i], maxWidth));
+        ans.pb(convert(buckets.back(), lens.back(), maxWidth, true));
         return ans;
+    }
+
+private:
+    string convert(const vector<string>& words, int len, int maxWidth, bool last = false) {
+        int n = sz(words);
+        int m = n - 1, spaces = maxWidth - len;
+        if (m == 0) {
+            string space(spaces, ' ');
+            return words[0] + space;
+        } else {
+            int even = spaces / m;
+            int left = spaces % m;
+            string sb;
+            loop(i, n) {
+                sb += words[i];
+                if (i != n - 1) {
+                    if (!last)
+                        sb += string(even, ' ');
+                    else
+                        sb += " ";
+                    if (left && !last) sb += " ", --left;
+                }
+            }
+            if (last) sb += string(spaces - m, ' ');
+            return sb;
+        }
+        assert(false);
     }
 };

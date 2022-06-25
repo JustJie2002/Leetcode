@@ -106,7 +106,7 @@ template <typename T> using graph = vector<vector<T>>;
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
 #define sz(a) int(a.size())
-#define Each(x, a) for (auto& x : a)
+#define each(x, a) for (auto& x : a)
 
 constexpr int inf = 1E9;
 constexpr ll INF = 1E18;
@@ -126,14 +126,17 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 
 class Solution {
 public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
-        for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
+    string greatestLetter(string s) {
+        set<char> dis;
+        each(x, s) dis.ins(x);
+        string ans;
+        for (int i = 25; i >= 0; i--) {
+            char c = 'a' + i;
+            char bc = 'A' + i;
+            if (dis.find(c) != dis.end() && dis.find(bc) != dis.end()) {
+                ans += bc;
+                break;
+            }
         }
         return ans;
     }

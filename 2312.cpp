@@ -106,7 +106,7 @@ template <typename T> using graph = vector<vector<T>>;
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
 #define sz(a) int(a.size())
-#define Each(x, a) for (auto& x : a)
+#define each(x, a) for (auto& x : a)
 
 constexpr int inf = 1E9;
 constexpr ll INF = 1E18;
@@ -126,15 +126,24 @@ template <typename T> bool ckmin(T &a, T b) { return a > b ? a = b, true : false
 
 class Solution {
 public:
-    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
-        sort(all(potions));
-        int n = sz(spells), m = sz(potions);
-        vi ans(n);
-        for (int i = 0; i < n; i++) {
-            ll need = ceil((db)success / spells[i]);
-            int idx = int(lower_bound(all(potions), need) - potions.begin());
-            ans[i] = m - idx;
+    long long sellingWood(int m, int n, vector<vector<int>>& prices) {
+        ll dp[m + 1][n + 1];
+        memset(dp, 0, sizeof dp);
+        each(w, prices) {
+            dp[w[0]][w[1]] = w[2];
         }
-        return ans;
+        for (int i = 1; i <= m; i++)
+            for (int j = 1; j <= n; j++) {
+                ckmax(dp[i][j], dp[i - 1][j]);
+                ckmax(dp[i][j], dp[i][j - 1]);
+                
+                for (int k = 0; k <= i; k++) {
+                    ckmax(dp[i][j], dp[i - k][j] + dp[k][j]);
+                }
+                for (int k = 0; k <= j; k++) {
+                    ckmax(dp[i][j], dp[i][j - k] + dp[i][k]);
+                }
+            }
+        return dp[m][n];
     }
 };
