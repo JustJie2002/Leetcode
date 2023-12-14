@@ -1,3 +1,10 @@
+---
+fontfamily: Papyrus
+---
+
+<span style="font-family:Poppins;font-size:1.1rem">
+
+### Status Key
 | Status Name | Meaning |
 | - | - |
 | AC | Finished all |
@@ -7,20 +14,22 @@
 ---
 
 ### Easy
-| # | Title | Status |
-| - | - | - |
+| # | Title | Status | Tag |
+| - | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | WA |
 
 ---
 
 ### Medium
-| # | Title | Status |
-| - | - | - |
+| # | Title | Status | Tag |
+| - | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | WA |
 
 ---
 
 ### Hard
-| # | Title | Status |
-| - | - | - |
+| # | Title | Status | Tag |
+| - | - | - | - |
 | 4 | [Median of Two Sorted Arrays](Hard/P4/) | WA |
+
+</span>

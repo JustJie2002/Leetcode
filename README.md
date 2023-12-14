@@ -1,4 +1,7 @@
-**Table of Content**
+
+<span style="font-family:Poppins;font-size:1.3rem">
+
+## Table of Content
 - [Introduction](#introduction)
 - [Overview](#overview)
   - [Problem](#problem)
@@ -33,3 +36,5 @@ However, there might be times when the explanation is incomplete. That would onl
 
 ## Contest
 For contest section, it's just going to be a storage area for my contest code and will not have explanation because it might or might not be well written.
+
+</span>
