@@ -1,8 +1,4 @@
----
-fontfamily: Papyrus
----
-
-<span style="font-family:Poppins;font-size:1.1rem">
+<span style="font-family:Papyrus;font-size:1.1rem">
 
 ### Status Key
 | Status Name | Meaning |
