@@ -25,7 +25,7 @@ I will be splitting this repository into 2 parts:
 - Problem
 - Contest
 
-## Problem
+## [Problem](Problem/)
 For problem section, I will sort them based on their leetcode difficulty: Easy, Medium, and Hard. For each problem, I will write out the code as well as the explanation for the problem. Each explanation will be in the following format:
 1. Code
 2. Explanation
@@ -34,7 +34,7 @@ For problem section, I will sort them based on their leetcode difficulty: Easy, 
 
 However, there might be times when the explanation is incomplete. That would only happen if I can't think of the best way to explain the current question.
 
-## Contest
+## [Contest](Contest/)
 For contest section, it's just going to be a storage area for my contest code and will not have explanation because it might or might not be well written.
 
 </span>
