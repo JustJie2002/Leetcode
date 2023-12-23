@@ -15,6 +15,7 @@
 ### Contests
 | # | Title | Status | Rank |
 | - | - | - | - |
+| BW120 | [Biweekly Contest 120](BW120/) | IC + AC | 124 / 21358 |
 | W376 | [Weekly Contest 376](W376/) | IC + AC | 89 / 19995 |
 | W375 | [Weekly Contest 375](W375/) | AC | N/A |
 | BW119 | [Biweekly Contest 119](BW119/) | IC + AC | 921 / 17707 |
