@@ -5,6 +5,7 @@
 *********************************************/
 
 using i64 = long long;
+using Edge = pair<int, int>;
 
 constexpr int A = 26, inf = int(1e9) + 5;
 int w[A][A];
@@ -19,25 +20,47 @@ public:
         int n = s.size();
         int m = a.size();
 
+        vector<vector<Edge>> adj(A);
+
         for (int i = 0; i < A; i++) {
             for (int j = 0; j < A; j++) {
-                if (i != j) {
-                    w[i][j] = inf;
-                }
+                w[i][j] = inf;
             }
         }
 
         for (int i = 0; i < m; i++) {
             int from = ord(a[i]), to = ord(b[i]);
-            w[from][to] = min(w[from][to], c[i]);
+            adj[from].emplace_back(to, c[i]);
         }
 
-        for (int k = 0; k < A; k++) {
-            for (int i = 0; i < A; i++) {
-                for (int j = 0; j < A; j++) {
-                    w[i][j] = min(w[i][j], w[i][k] + w[k][j]);
+        auto ckmin = [&](int& a, int b) -> bool {
+            if (b < a) {
+                a = b;
+                return true;
+            }
+            return false;
+        };
+
+        auto dijkstra = [&](int src) -> void {
+            w[src][src] = 0;
+            priority_queue<Edge, vector<Edge>, greater<Edge>> pq;
+            pq.emplace(0, src);
+            while (!pq.empty()) {
+                auto [cur_cost, from] = pq.top();
+                pq.pop();
+                if (cur_cost != w[src][from]) {
+                    continue;
+                }
+                for (const auto& [to, cost] : adj[from]) {
+                    if (ckmin(w[src][to], cur_cost + cost)) {
+                        pq.emplace(w[src][to], to);
+                    }
                 }
             }
+        };
+
+        for (int i = 0; i < A; i++) {
+            dijkstra(i);
         }
 
         i64 ans = 0;

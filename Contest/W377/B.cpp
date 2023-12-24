@@ -33,7 +33,7 @@ public:
         auto sb = get(b);
 
         i64 ans = -1;
-        for (i64 x : sa) if (sb.count(x)) {
+        for (i64 x : sa) if (sb.contains(x)) {
             i64 area = x * x;
             ans = max(ans, area);
         }

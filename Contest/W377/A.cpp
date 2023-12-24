@@ -10,8 +10,8 @@ class Solution {
 public:
     vector<int> numberGame(vector<int>& a) {
         int n = a.size();
-
         sort(a.begin(), a.end());
+
         for (int i = 0; i < n; i += 2) {
             swap(a[i], a[i + 1]);
         }
