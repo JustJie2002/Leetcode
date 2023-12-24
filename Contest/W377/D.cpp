@@ -26,7 +26,7 @@ struct hashes {
         for (int i=0; i<s.size(); i++) {
             powers.push_back(powers.back()*base%mod);
             invpowers.push_back(invpowers.back()*inv%mod);
-            psa.push_back((psa.back()+s[i]*powers[i])%mod);
+            psa.push_back((psa.back()+(s[i] - 'a' + 1)*powers[i])%mod);
         }
     }
 
@@ -37,15 +37,7 @@ struct hashes {
     }
 };
 
-i64 whole(const string& s) {
-    int m = 1000000007, int b = 131;
-    i64 psa = 0;
-    i64 pw = 0;
-    for (int i=0; i<s.size(); i++) {
-        powers.push_back(powers.back()*base%mod);
-        psa.push_back((psa.back()+s[i]*powers[i])%mod);
-    }
-}
+using Edge = pair<int, int>;
 
 constexpr int N = 201;
 constexpr i64 inf = i64(1e18) + 5;
@@ -61,11 +53,23 @@ void Init() {
     }
 }
 
-void ckmin(i64& a, i64 b) {
-    if (b < a) {
-        a = b;
+long long compute_hash(string const& s) {
+    const int p = 131;
+    const int m = 1000000007;
+    long long hash_value = 0;
+    long long p_pow = 1;
+    for (char c : s) {
+        hash_value = (hash_value + (c - 'a' + 1) * p_pow) % m;
+        p_pow = (p_pow * p) % m;
     }
+    return hash_value;
 }
+
+// void ckmin(i64& a, i64 b) {
+//     if (b < a) {
+//         a = b;
+//     }
+// }
 
 struct custom_hash {
     static uint64_t splitmix64(uint64_t x) {
@@ -96,59 +100,82 @@ public:
         int id = 0;
 
         auto create = [&](const auto& s) -> int {
-            if (!ids.count(s)) {
+            if (!ids.contains(s)) {
                 ids[s] = id++;
             }
             return ids[s];
         };
         auto get = [&](const auto& s) -> int {
-            if (!ids.count(s)) {
+            if (!ids.contains(s)) {
                 return -1;
             }
             return ids[s];
         };
 
+        vector<vector<Edge>> adj(N);
+        set<int> siz;
         for (int i = 0; i < m; i++) {
             int o = a[i].size();
-            i64 from = create(hashes(a[i]).get(0, o - 1)), to = create(hashes(b[i]).get(0, o - 1));
-            ckmin(w[from][to], c[i]);
+            siz.insert(o);
+            int from = create(compute_hash(a[i])), to = create(compute_hash(b[i]));
+            adj[from].emplace_back(to, c[i]);
         }
 
-        for (int k = 0; k < id; k++) {
-            for (int i = 0; i < id; i++) {
-                for (int j = 0; j < id; j++) {
-                    ckmin(w[i][j], w[i][k] + w[k][j]);
+        auto ckmin = [&](i64& a, const i64& b) -> bool {
+            if (b < a) {
+                a = b;
+                return true;
+            }
+            return false;
+        };
+
+        auto dijkstra = [&](int src) -> void {
+            w[src][src] = 0;
+            priority_queue<Edge, vector<Edge>, greater<Edge>> pq;
+            pq.emplace(0, src);
+            while (!pq.empty()) {
+                auto [cur_cost, from] = pq.top();
+                pq.pop();
+                if (cur_cost != w[src][from]) {
+                    continue;
+                }
+                for (const auto& [to, cost] : adj[from]) {
+                    if (ckmin(w[src][to], cur_cost + cost)) {
+                        pq.emplace(w[src][to], to);
+                    }
                 }
             }
+        };
+
+        for (int i = 0; i < id; i++) {
+            dijkstra(i);
         }
 
-        vector<vector<i64>> dp(n, vector<i64>(n, inf));
+        vector dp(n, inf);
         for (int j = n - 1; j >= 0; j--) {
-            for (int i = j; i < n; i++) {
+            if (s[j] == t[j]) {
+                dp[j] = (j < n - 1 ? dp[j + 1] : 0);
+            }
+            for (int sz : siz) {
+                int i = j + sz - 1;
+                if (i >= n) break;
                 i64 from = s_hash.get(j, i);
                 i64 to = t_hash.get(j, i);
                 int aa = get(from), bb = get(to);
-                if (from == to) {
-                    if (i == n - 1) {
-                        ckmin(dp[j][i], 0);
-                    } else if (dp[i + 1][n - 1] != inf) {
-                        ckmin(dp[j][n - 1], dp[i + 1][n - 1]);
-                    }
-                }
                 if (aa == -1 || bb == -1) {
                     continue;
                 }
                 if (w[aa][bb] != inf) {
                     if (i == n - 1) {
-                        ckmin(dp[j][i], w[aa][bb]);
-                    } else if (dp[i + 1][n - 1] != inf) {
-                        ckmin(dp[j][n - 1], dp[i + 1][n - 1] + w[aa][bb]);
+                        ckmin(dp[j], w[aa][bb]);
+                    } else if (dp[i + 1] != inf) {
+                        ckmin(dp[j], dp[i + 1] + w[aa][bb]);
                     }
                 }
             }
         }
 
-        auto& res = dp[0][n - 1];
+        const auto& res = dp[0];
         return (res == inf ? -1 : res);
     }
 };
