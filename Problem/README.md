@@ -20,6 +20,7 @@
 | # | Title | Status | Tag |
 | - | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | WA |
+| 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | WA |
 
 ---
 
@@ -27,5 +28,6 @@
 | # | Title | Status | Tag |
 | - | - | - | - |
 | 4 | [Median of Two Sorted Arrays](Hard/P4/) | WA |
+| 1606 | [Find Servers That Handled Most Number of Requests](Hard/P1606/) | AC |
 
 </span>
