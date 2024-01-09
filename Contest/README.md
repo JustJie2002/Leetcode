@@ -16,7 +16,7 @@
 | # | Title | Status | Rank |
 | - | - | - | - |
 | W379 | [Weekly Contest 379](W379/) | IC + WA | 223 / 21416 |
-| BW121 | [Biweekly Contest 121](BW121/) | IC + VC | 54 / 23810 |
+| BW121 | [Biweekly Contest 121](BW121/) | VC + AC | 54 / 23810 |
 | W378 | [Weekly Contest 378](W378/) | IC + AC | 107 / 21165 |
 | W377 | [Weekly Contest 377](W377/) | IC + WA + AC | 1498 / 21837 |
 | BW120 | [Biweekly Contest 120](BW120/) | IC + AC | 124 / 21358 |
