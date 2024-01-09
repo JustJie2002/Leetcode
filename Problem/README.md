@@ -21,6 +21,7 @@
 | - | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | WA |
 | 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | WA |
+| 2212 | [Maximum Points in an Archery Competition](Medium/P2212/) | AC |
 
 ---
 
