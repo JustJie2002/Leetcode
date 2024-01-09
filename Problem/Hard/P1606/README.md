@@ -14,5 +14,5 @@ Let's work through each simulation steps one at a time
 
 After that we're completely done with the simulation
 
-Time Complexity: O(N log K)
+Time Complexity: O(N log K) \
 Space Complexity: O(K)

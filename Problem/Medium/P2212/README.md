@@ -17,3 +17,6 @@ Now we have a couple options to solve this problem:
   - Here 0th, 2nd, 6th, and 10th bit are 1 referring to scenario 1
   - Other bits are 0 referring to scenario 2
   - Simulate
+
+Time Complexity: O(N * 2^N) \
+Space Complexity: O(N)

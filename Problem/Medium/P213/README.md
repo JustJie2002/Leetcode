@@ -24,3 +24,6 @@ It's impossible to not rob house 0 being at house 0 so we can "skip" that one by
 1. dp[i][k] = a[i] + max(dp[j][k]) such that j - i >= 2 and 1 < i < n - 1
 2. dp[n - 1][0] = -inf and dp[n - 1][1] = a[i] + max(dp[j][k]) \
 If we rob last house then we can't rob first house since everything is circular.
+
+Time Complexity: O(N^2)
+Space Complexity: O(N)
