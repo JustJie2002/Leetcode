@@ -15,6 +15,7 @@
 ### Contests
 | # | Title | Status | Rank |
 | - | - | - | - |
+| W380 | [Weekly Contest 380](W380/) | IC + AC | 84 / 21192 |
 | W379 | [Weekly Contest 379](W379/) | IC + WA | 223 / 21416 |
 | BW121 | [Biweekly Contest 121](BW121/) | VC + AC | 54 / 23810 |
 | W378 | [Weekly Contest 378](W378/) | IC + AC | 107 / 21165 |
@@ -24,5 +25,6 @@
 | W375 | [Weekly Contest 375](W375/) | AC | N/A |
 | BW119 | [Biweekly Contest 119](BW119/) | IC + AC | 921 / 17707 |
 | W374 | [Weekly Contest 374](W374/) | IC + WA + AC | 237 / 19630 |
+
 
 </span>
