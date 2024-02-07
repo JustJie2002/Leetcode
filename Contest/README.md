@@ -1,5 +1,5 @@
 
-<span style="font-family:Papyrus;font-size:1.1rem">
+<span style="font-family:Papyrus;font-size:0.8rem">
 
 ### Status Key
 | Status Name | Meaning |
@@ -15,6 +15,9 @@
 ### Contests
 | # | Title | Status | Rank |
 | - | - | - | - |
+| W383 | [Weekly Contest 383](W383/) | IC + AC | 5 / 22688 |
+| W382 | [Weekly Contest 382](W382/) | IC + WA | 143 / 24875 |
+| W381 | [Weekly Contest 381](W381/) | IC + TLE | 182 / 24931 |
 | W380 | [Weekly Contest 380](W380/) | IC + AC | 84 / 21192 |
 | W379 | [Weekly Contest 379](W379/) | IC + WA | 223 / 21416 |
 | BW121 | [Biweekly Contest 121](BW121/) | VC + AC | N/A |
@@ -27,7 +30,5 @@
 | W374 | [Weekly Contest 374](W374/) | IC + WA + AC | 237 / 19630 |
 | W267 | [Weekly Contest 267](W267/) | AC | N/A |
 | W266 | [Weekly Contest 266](W266/) | AC | N/A |
-
-
 
 </span>

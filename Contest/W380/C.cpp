@@ -10,13 +10,10 @@ constexpr i64 inf = 1e18 + 10;
 
 class Solution {
 public:
-
-    long long findMaximumNumber(long long k, int x) {
-
+    i64 findMaximumNumber(long long k, int x) {
         auto solve = [&](i64 cutoff) -> i64 {
             for (int b = x; ; b += x) {
                 i64 nex = 1 << (b + x - 1);
-                
                 if (nex > cutoff) {
                     break;
                 }
