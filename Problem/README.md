@@ -1,4 +1,4 @@
-<span style="font-family:Papyrus;font-size:1.1rem">
+<span style="font-family:Papyrus;font-size0.6rem">
 
 ### Status Key
 | Status Name | Meaning |
@@ -10,25 +10,26 @@
 ---
 
 ### Easy
-| # | Title | Status | Tag |
-| - | - | - | - |
-| 1 | [Two Sum](Easy/P1/) | WX |
+| # | Title | Status |
+| - | - | - |
+| 1 | [Two Sum](Easy/P1/) | AC |
 
 ---
 
 ### Medium
-| # | Title | Status | Tag |
-| - | - | - | - |
+| # | Title | Status |
+| - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | WX |
-| 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
-| 2212 | [Maximum Points in an Archery Competition](Medium/P2212/) | AC |
 | 213 | [House Robber II](Medium/P213/) | AC |
+| 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
+| 1557 | [Minimum Number of Vertices to Reach All Nodes](Medium/P1557/) | AC |
+| 2212 | [Maximum Points in an Archery Competition](Medium/P2212/) | AC |
 
 ---
 
 ### Hard
-| # | Title | Status | Tag |
-| - | - | - | - |
+| # | Title | Status |
+| - | - | - |
 <!-- | 4 | [Median of Two Sorted Arrays](Hard/P4/) | WA | -->
 | 1606 | [Find Servers That Handled Most Number of Requests](Hard/P1606/) | AC |
 
