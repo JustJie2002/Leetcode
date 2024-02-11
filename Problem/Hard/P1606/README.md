@@ -1,3 +1,5 @@
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
 View this problem as a simulation problem in following steps:
 1. Suppose all servers are free
 2. For each request, free up any servers that are done at or before current time
@@ -6,6 +8,8 @@ View this problem as a simulation problem in following steps:
 
 Answer will just be the servers that have maximum assignments
 
+# Approach
+<!-- Describe your approach to solving the problem. -->
 Let's work through each simulation steps one at a time
 1. We can have some data structure that stores all free servers
 2. Since we want to check for the "end time" of each request assignment to those servers, we can use a min priority queue to have the requests that end first at the top. Pop the top of the priority queue whenever we passed that time and free up that server by putting back in the list of free servers.
@@ -14,5 +18,9 @@ Let's work through each simulation steps one at a time
 
 After that we're completely done with the simulation
 
-Time Complexity: O(N log K) \
-Space Complexity: O(K)
+# Complexity
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+- Time Complexity: O(N log K)
+
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+- Space Complexity: O(K)

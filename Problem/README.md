@@ -13,6 +13,7 @@
 | # | Title | Status |
 | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | AC |
+| 1971 | [Find if Path Exists in Graph](Easy/P1971/) | AC |
 
 ---
 
@@ -30,7 +31,6 @@
 ### Hard
 | # | Title | Status |
 | - | - | - |
-<!-- | 4 | [Median of Two Sorted Arrays](Hard/P4/) | WA | -->
 | 1606 | [Find Servers That Handled Most Number of Requests](Hard/P1606/) | AC |
 
 </span>
