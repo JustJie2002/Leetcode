@@ -1,6 +1,3 @@
-
-<span style="font-family:Papyrus;font-size:1.3rem">
-
 ## Table of Content
 - [Introduction](#introduction)
 - [Overview](#overview)
@@ -36,5 +33,3 @@ However, there might be times when the explanation is incomplete. That would onl
 
 ## [Contest](Contest/)
 For contest section, it's just going to be a storage area for my contest code and will not have explanation because it might or might not be well written.
-
-</span>
