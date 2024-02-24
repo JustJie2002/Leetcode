@@ -1,5 +1,3 @@
-<span style="font-family:Papyrus;font-size0.6rem">
-
 ### Status Key
 | Status Name | Meaning |
 | - | - |
@@ -13,6 +11,7 @@
 | # | Title | Status |
 | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | AC |
+| 872 | [Leaf-Similar Trees](Easy/P872/) | WX |
 | 1971 | [Find if Path Exists in Graph](Easy/P1971/) | AC |
 
 ---
@@ -36,5 +35,3 @@
 | 1420 | [Build Array Where You Can Find The Maximum Exactly K Comparisons](Hard/P1420/) | WX |
 | 1463 | [Cherry Pickup II](Hard/P1463) | WX |
 | 1606 | [Find Servers That Handled Most Number of Requests](Hard/P1606/) | AC |
-
-</span>
