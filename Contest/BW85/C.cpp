@@ -1,7 +1,7 @@
 /********************************************
  * author : Jie Chen (3rd Year CS)
  * school : Rochester Institute of Technology
- * created: 02.06.2024 21:42:11
+ * created: 03.01.2024 10:07:19
 *********************************************/
 
 using i64 = long long;
@@ -9,17 +9,29 @@ using i64 = long long;
 class Solution {
 public:
     string shiftingLetters(string s, vector<vector<int>>& shifts) {
-        int n = s.size();
+        int n = s.length();
 
         vector<int> dif(n + 1);
-        for (const auto& shift : shifts) {
-            int s = shift[0], e = shift[1] + 1, d = shift[2];
-            if (d == 0) d = -1;
-            dif[s] += d;
-            dif[e] -= d;
+        for (const auto& info : shifts) {
+            int del = (info[2] == 0 ? -1 : +1);
+            dif[info[0]] += del;
+            dif[info[1] + 1] -= del;
         }
 
-        for ()
+        auto norm = [&](int o) -> int {
+            o %= 26;
+            if (o < 0) o += 26;
+            return o;
+        };
+
+        int cur = 0;
+        for (int i = 0; i < n; i++) {
+            cur += dif[i];
+            int o = norm(s[i] - 'a' + cur);
+            s[i] = char(o + 'a');
+        }
+
+        return s;
     }
 };
 
