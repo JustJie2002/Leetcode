@@ -1,3 +1,4 @@
+# Intuition
 First we have to understand some key information from the question:
 - Arranged in a circle
 - Popo will come if 2 adjacent houses are robbed
@@ -5,6 +6,7 @@ First we have to understand some key information from the question:
 
 We know this is a dp problem because we can turn the results of some subproblem into use for other subproblems which can result in the answer. (This part may make more sense after seeing the states of dp)
 
+# Approach
 Whenever we solve a DP (Dynamic Programming) problem we want to know 3 things:
 - WHAT: What are the states of dp? What is the meaning of each
 - WHERE: Where will the answer be stored?
@@ -25,5 +27,6 @@ It's impossible to not rob house 0 being at house 0 so we can "skip" that one by
 2. dp[n - 1][0] = -inf and dp[n - 1][1] = a[i] + max(dp[j][k]) \
 If we rob last house then we can't rob first house since everything is circular.
 
-Time Complexity: O(N^2)
-Space Complexity: O(N)
+# Complexity
+- Time Complexity: O(N^2)
+- Space Complexity: O(N)
