@@ -5,5 +5,6 @@ Since every time we see an element that is greater than previously seen element,
 
 
 # Complexity
-Time Complexity:       \
-Space Complexity: 
+- Time Complexity:
+
+- Space Complexity: 

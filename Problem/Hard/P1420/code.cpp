@@ -132,7 +132,6 @@ Z dp[N][M][N];
 /*
 dp[i][j][k] = 
 # of ways to construct an array of length i such that the max element is j and search cost = k
-
 */
 class Solution {
 public:

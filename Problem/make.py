@@ -2,6 +2,7 @@
 import argparse
 import subprocess as sp
 import os
+import pyperclip as pp
 
 parser = argparse.ArgumentParser(
     prog = "py make.py",
@@ -23,5 +24,8 @@ path = os.path.join(mapper[args.d], f"P{args.pid}")
 
 if os.path.exists(path):
     print("You've already done that problem or were working on it.")
+    print(f"Just copied {path} to your clipboard.")
 else:
     sp.run(f"cp -r Temp {path}", shell = True)
+    print(f"Folder {path} created and copied to your clipboard.")
+    pp.copy(path)
