@@ -10,4 +10,5 @@ Enumerate through each height in the array. Take each height as a pivot of what 
 
 # Complexity
 - Time Complexity: O(N)
+
 - Space Complexity: O(N)

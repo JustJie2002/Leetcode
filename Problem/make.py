@@ -5,7 +5,7 @@ import os
 import pyperclip as pp
 
 parser = argparse.ArgumentParser(
-    prog = "py make.py",
+    prog = "py make.py d pid",
     description = "Creating a folder to store leetcode solutions and editorials"
 )
 

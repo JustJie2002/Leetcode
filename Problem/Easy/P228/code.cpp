@@ -8,25 +8,25 @@ using i64 = long long;
 
 class Solution {
 public:
-    vector<string> summaryRanges(vector<int>& a) {
-        if (a.empty()) {
+    vector<string> summaryRanges(vector<int>& nums) {
+        if (nums.empty()) {
             return {};
         }
-        a.push_back(a.back()); // using this so we can append the last chunk of range without explicitly asking it to
+        nums.push_back(nums.back()); // using this so we can append the last chunk of range without explicitly asking it to
 
         auto convert_range = [&](int s, int e) -> string {
-            string range = to_string(a[s]);
+            string range = to_string(nums[s]);
             if (s != e) {
                 range += "->";
-                range += to_string(a[e]);
+                range += to_string(nums[e]);
             }
             return range;
         };
 
         int start = 0;
         vector<string> ranges;
-        for (int end = 1; end < a.size(); end++) {
-            if (a[end - 1] == INT_MAX || a[end] != a[end - 1] + 1) {
+        for (int end = 1; end < nums.size(); end++) {
+            if (nums[end - 1] == INT_MAX || nums[end] != nums[end - 1] + 1) {
                 ranges.push_back(convert_range(start, end - 1));
                 start = end;
             }
