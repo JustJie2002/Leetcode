@@ -19,6 +19,7 @@ path = os.path.join(f"{args.t}{args.cid}")
 if os.path.exists(path):
     print("You've already done that contest or were working on it.")
     print(f"Here's the path: {path} and it's copied to your clipboard.")
-    pp.copy(path)
 else:
     sp.run(f"cp -r Temp {path}", shell = True)
+    print(f"Folder {path} created and copied to your clipboard.")
+pp.copy(path)

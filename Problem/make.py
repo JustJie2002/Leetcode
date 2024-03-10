@@ -28,4 +28,4 @@ if os.path.exists(path):
 else:
     sp.run(f"cp -r Temp {path}", shell = True)
     print(f"Folder {path} created and copied to your clipboard.")
-    pp.copy(path)
+pp.copy(path)
