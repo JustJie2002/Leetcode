@@ -1,49 +1,57 @@
 /********************************************
  * author : Jie Chen (3rd Year CS)
  * school : Rochester Institute of Technology
- * created: 02.03.2024 14:02:23
+ * created: 03.09.2024 20:06:44
 *********************************************/
 
 using i64 = long long;
 
 #include <ext/pb_ds/assoc_container.hpp>
-using namespace __gnu_pbds;
-template <typename T> 
-using ordered_set = tree<T, null_type, less<T>, rb_tree_tag,tree_order_statistics_node_update>;
 
-template <typename T> struct SortedList {
-    ordered_set<pair<T, int>> ost;
-    map<T, int> freq;
-
-    void add(T val) { ost.insert(make_pair(val, ++freq[val])); }
-    void remove(T val) { ost.erase(make_pair(val, freq[val]--)); }
-    int index(T val) { return ost.order_of_key(make_pair(val, -1)); }
-    T operator[] (int i) const { return ost.find_by_order(i)->first; }
-
-    T lower_bound(T val) {
-        auto it = ost.lower_bound(make_pair(val, -1));
-        return it == ost.end() ? ost.size() : ost.order_of_key(*it);
+struct custom_hash {
+    static uint64_t splitmix64(uint64_t x) {
+        // http://xorshift.di.unimi.it/splitmix64.c
+        x += 0x9e3779b97f4a7c15;
+        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
+        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
+        return x ^ (x >> 31);
     }
-
-    T upper_bound(T val) {
-        auto it = ost.lower_bound(make_pair(val, 1000000000));
-        return it == ost.end() ? ost.size() : ost.order_of_key(*it);
+ 
+    size_t operator()(uint64_t x) const {
+        static const uint64_t FIXED_RANDOM = std::chrono::steady_clock::now().time_since_epoch().count();
+        return splitmix64(x + FIXED_RANDOM);
     }
-
-    int size() { return ost.size(); }
-    bool empty() { return ost.empty(); }
 };
+ 
+template <typename K, typename V, typename Hash = custom_hash>
+using HashMap = __gnu_pbds::gp_hash_table<K, V, Hash>;
+ 
+template <typename K, typename Hash = custom_hash>
+using HashSet = HashMap<K, __gnu_pbds::null_type, Hash>;
+
+constexpr i64 inf = 1e15 + 10;
 
 class Solution {
 public:
     i64 maximumSubarraySum(vector<int>& a, int k) {
-        SortedList<int> sl;
-        i64 ans = 0;
+        HashMap<int, i64> pos;
+        i64 pre = 0, ans = -inf;
         for (int x : a) {
-            int L = sl.lower_bound(x - k);
-            int R = sl.upper_bound(x + k);
-            ans += R - L;
-            sl.add(x); 
+            if (pos.find(x) == pos.end()) {
+                pos[x] = inf;
+            }
+            pos[x] = min(pos[x], pre);
+
+            pre += x;
+            for (int d : {x - k, x + k}) {
+                if (pos.find(d) != pos.end()) {
+                    ans = max(ans, pre - pos[d]);
+                }
+            }
+        }
+
+        if (ans == -inf) {
+            ans = 0;
         }
         return ans;
     }

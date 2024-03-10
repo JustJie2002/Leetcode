@@ -20,7 +20,9 @@ public:
         for (int i = 1; i < n; i++) {
             if (a[i] == a[i - 1] + 1) {
                 sum += a[i];
-            } else break;
+            } else {
+                break;
+            }
         }
 
         while (s.contains(sum)) {

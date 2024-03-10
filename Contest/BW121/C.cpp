@@ -16,11 +16,10 @@ public:
             return y - x;
         }
 
-
         memset(seen, false, sizeof(seen));
         queue<int> q;
 
-        auto append = [&](int u) {
+        auto enqueue = [&](int u) {
             if (u < 0 || u >= N) return;
             if (!seen[u]) {
                 q.push(u);
@@ -28,7 +27,7 @@ public:
             }
         };
 
-        append(x);
+        enqueue(x);
         for (int s = 0; ; s++) {
             int Q = q.size();
             while (Q--) {
@@ -36,13 +35,13 @@ public:
                 q.pop();
                 if (u == y) return s;
                 if (u % 11 == 0) {
-                    append(u / 11);
+                    enqueue(u / 11);
                 }
                 if (u % 5 == 0) {
-                    append(u / 5);
+                    enqueue(u / 5);
                 }
-                append(u + 1);
-                append(u - 1);
+                enqueue(u + 1);
+                enqueue(u - 1);
             }
         }
 
