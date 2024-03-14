@@ -15,6 +15,7 @@
 ### LC Weekly Contests
 | # | Title | Status | Rank |
 | - | - | - | - |
+| W388 | [Weekly Contest 388](W388/) | AC | N/A |
 | W387 | [Weekly Contest 387](W387/) | IC + AC | 31 / 30345 |
 | W386 | [Weekly Contest 386](W386/) | IC + TLE + AC | 3969 / 28377 |
 | W385 | [Weekly Contest 385](W385/) | IC + AC | 86 / 25554 |
@@ -50,6 +51,7 @@
 | BW86 | [Biweekly Contest 86](BW86/) | AC | N/A |
 | BW85 | [Biweekly Contest 85](BW85/) | AC | N/A |
 | BW83 | [Biweekly Contest 83](BW83/) | AC | N/A |
+| BW83 | [Biweekly Contest 82](BW83/) | VC | 16 / 16922 |
 | BW75 | [Biweekly Contest 75](BW75/) | AC | N/A |
 
 </span>

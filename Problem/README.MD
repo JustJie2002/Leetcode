@@ -25,7 +25,9 @@
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
 | 43 | [Multiply Strings](Medium/P43/) | AC |
 | 213 | [House Robber II](Medium/P213/) | AC |
+| 930 | [Binary Subarrays With Sum](Medium/P930) | AC |
 | 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
+| 1155 | [Number of Dice Rolls With Target Sum](Medium/P1155/) | AC |
 | 1376 | [Time Needed to Inform All Employees](Medium/P1376) | AC |
 | 1557 | [Minimum Number of Vertices to Reach All Nodes](Medium/P1557/) | AC |
 | 1976 | [Number of Ways to Arrive at Destination](Medium/P1976) | WX |
