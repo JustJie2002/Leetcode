@@ -10,19 +10,6 @@ using Pair = pair<int, int>;
 #define f   first
 #define s   second
 
-/*
-[[9,9,4],
- [6,6,8],
- [2,1,1]
-]
-
-WHAT: dp[i][j] = length of the longest path ending at (i, j)
-WHERE: max(dp)
-HOW: dp[i][j] = 1 + max(neighbor) as long as neighbor is greater than current coordinate value
-
-we have to process all of the dp values for coordinates with greater values
-*/
-
 constexpr int di[] = {0, 1, 0, -1};
 constexpr int dj[] = {1, 0, -1, 0};
 
