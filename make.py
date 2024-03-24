@@ -46,7 +46,10 @@ class Maker:
                 pp.copy(path)
                 path_no_pre = path[len(self.PROBLEM_DIR) + 1: ]
                 with open(f"{self.PROBLEM_DIR}/README.MD", "a+") as fp:
-                    fp.write(f"\n| {pid} | [{name}]({path_no_pre}) | WA |")
+                    fp.seek(0)
+                    info = fp.read()
+                    if pid not in info:
+                        fp.write(f"\n| {pid} | [{name}]({path_no_pre}) | WA |")
             case "C":
                 name, path = self.contest_parse(link)
                 if os.path.exists(path):
@@ -61,7 +64,10 @@ class Maker:
                 pp.copy(path)
                 path_no_pre = path[len(self.CONTEST_DIR) + 1: ]
                 with open(f"{self.CONTEST_DIR}/README.MD", "a+") as fp:
-                    fp.write(f"\n| {path_no_pre} | [{name}]({path_no_pre}/) | N/A | N/A |")
+                    fp.seek(0)
+                    info = fp.read()
+                    if name not in info:
+                        fp.write(f"\n| {path_no_pre} | [{name}]({path_no_pre}/) | N/A | N/A |")
             case "N/A":
                 print("Sorry we don't support this link or it's not valid.")
 
