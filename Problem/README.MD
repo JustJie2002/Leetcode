@@ -26,7 +26,7 @@
 
 ---
 
-### Medium (7)
+### Medium (31)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
@@ -63,7 +63,7 @@
 
 ---
 
-### Hard 
+### Hard (18)
 | # | Title | Status |
 | - | - | - |
 | 84 | [Largest Rectangle in Histogram](Hard/P84) | AC |
