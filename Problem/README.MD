@@ -36,30 +36,30 @@
 | 213 | [House Robber II](Medium/P213/) | AC |
 | 240 | [Search a 2D Matrix II](Medium/P240/) | WX |
 | 249 | [Group Shifted Strings](Medium/P249) | WX |
-| 274 | [H-Index](Medium/P274) | WA |
-| 275 | [H-Index II](Medium/P275) | WA |
-| 299 | [Bulls and Cows](Medium/P299) | WA |
-| 375 | [Guess Number Higher or Lower II](Medium/P375) | WA |
+| 274 | [H-Index](Medium/P274) | WX |
+| 275 | [H-Index II](Medium/P275) | WX |
+| 299 | [Bulls and Cows](Medium/P299) | WX |
+| 375 | [Guess Number Higher or Lower II](Medium/P375) | WX |
 | 621 | [Task Scheduler](Medium/P621) | WX |
 | 930 | [Binary Subarrays With Sum](Medium/P930) | AC |
 | 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
 | 1155 | [Number of Dice Rolls With Target Sum](Medium/P1155/) | AC |
 | 1376 | [Time Needed to Inform All Employees](Medium/P1376) | AC |
 | 1557 | [Minimum Number of Vertices to Reach All Nodes](Medium/P1557/) | AC |
-| 1669 | [Merge In Between Linked Lists](Medium/P1669) | WA |
+| 1669 | [Merge In Between Linked Lists](Medium/P1669) | WX |
 | 1976 | [Number of Ways to Arrive at Destination](Medium/P1976) | WX |
 | 2090 | [K Radius Subarray Averages](Medium/P2090) | AC |
 | 2212 | [Maximum Points in an Archery Competition](Medium/P2212/) | AC |
 | 2365 | [Task Scheduler II](Medium/P2365) | WX |
-| 2501 | [Longest Square Streak in an Array](Medium/P2501) | WA |
-| 2502 | [Design Memory Allocator](Medium/P2502) | WA |
-| 2507 | [Smallest Value After Replacing With Sum of Prime Factors](Medium/P2507) | WA |
-| 2512 | [Reward Top K Students](Medium/P2512) | WA |
+| 2501 | [Longest Square Streak in an Array](Medium/P2501) | WX |
+| 2502 | [Design Memory Allocator](Medium/P2502) | WX |
+| 2507 | [Smallest Value After Replacing With Sum of Prime Factors](Medium/P2507) | WX |
+| 2512 | [Reward Top K Students](Medium/P2512) | WX |
 | 2513 | [Minimize the Maximum of Two Arrays](Medium/P2513) | WA |
-| 2834 | [Find the Minimum Possible Sum of a Beautiful Array](Medium/P2834) | WA |
-| 3084 | [Count Substrings Starting and Ending with Given Character](Medium/P3084) | WA |
-| 3085 | [Minimum Deletions to Make String K-Special](Medium/P3085) | WA |
-| 3091 | [Apply Operations to Make Sum of Array Greater Than or Equal to k](Medium/P3091) | WA |
+| 2834 | [Find the Minimum Possible Sum of a Beautiful Array](Medium/P2834) | AC |
+| 3084 | [Count Substrings Starting and Ending with Given Character](Medium/P3084) | WX |
+| 3085 | [Minimum Deletions to Make String K-Special](Medium/P3085) | WX |
+| 3091 | [Apply Operations to Make Sum of Array Greater Than or Equal to k](Medium/P3091) | AC |
 
 ---
 
@@ -76,11 +76,11 @@
 | 1463 | [Cherry Pickup II](Hard/P1463) | WX |
 | 1606 | [Find Servers That Handled Most Number of Requests](Hard/P1606/) | AC |
 | 1938 | [Maximum Genetic Difference Query](Hard/P1938) | WX |
-| 2318 | [Number of Distinct Roll Sequences](Hard/P2318) | WA |
+| 2318 | [Number of Distinct Roll Sequences](Hard/P2318) | WX |
 | 2421 | [Number of Good Paths](Hard/P2421) | WX |
-| 2503 | [Maximum Number of Points From Grid Queries](Hard/P2503) | WA |
-| 2508 | [Add Edges to Make Degrees of All Nodes Even](Hard/P2508) | WA |
-| 2509 | [Cycle Length Queries in a Tree](Hard/P2509) | WA |
-| 2514 | [Count Anagrams](Hard/P2514) | WA |
+| 2503 | [Maximum Number of Points From Grid Queries](Hard/P2503) | WX |
+| 2508 | [Add Edges to Make Degrees of All Nodes Even](Hard/P2508) | WX |
+| 2509 | [Cycle Length Queries in a Tree](Hard/P2509) | WX |
+| 2514 | [Count Anagrams](Hard/P2514) | WX |
 | 2851 | [String Transformation](Hard/P2851) | WX |
-| 3093 | [Longest Common Suffix Queries](Hard/P3093) | WA |
+| 3093 | [Longest Common Suffix Queries](Hard/P3093) | WX |

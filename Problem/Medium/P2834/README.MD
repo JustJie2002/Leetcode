@@ -8,7 +8,7 @@ Set m to $\lfloor\frac{target - 1}{2}\rfloor$ \
 Case 1: n <= m \
 Add from 1 up to n.
 
-Case 2: n > m \
+Case 2: n > m
 1. Add from 1 up to m
 2. Add from target up to target + (n - m) - 1
 
