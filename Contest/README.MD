@@ -1,6 +1,3 @@
-
-<span style="font-family:Papyrus;font-size:0.8rem">
-
 ### Status Key
 | Status Name | Meaning |
 | - | - |
@@ -15,6 +12,8 @@
 ### LC Weekly Contests
 | # | Title | Status | Rank |
 | - | - | - | - |
+| W391 | [Weekly Contest 391](W391/) | N/A | N/A |
+| W390 | [Weekly Contest 390](W390/) | IC + AC | 84 / 27857 |
 | W389 | [Weekly Contest 389](W389/) | IC + AC | 93 / 27546 |
 | W388 | [Weekly Contest 388](W388/) | AC | N/A |
 | W387 | [Weekly Contest 387](W387/) | IC + AC | 31 / 30345 |
@@ -55,5 +54,3 @@
 | BW83 | [Biweekly Contest 83](BW83/) | AC | N/A |
 | BW83 | [Biweekly Contest 82](BW83/) | VC | 16 / 16922 |
 | BW75 | [Biweekly Contest 75](BW75/) | AC | N/A |
-
-</span>
