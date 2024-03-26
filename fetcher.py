@@ -1,3 +1,8 @@
+"""
+author: Jie Chen (3rd Year CS)
+school: Rochester Institute of Technology
+status: AC
+"""
 import requests
 
 class Fetcher:

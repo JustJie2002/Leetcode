@@ -9,7 +9,7 @@
 
 ---
 
-### LC Weekly Contests
+### LC Weekly Contests (22)
 | # | Title | Status | Rank |
 | - | - | - | - |
 | W391 | [Weekly Contest 391](W391/) | N/A | N/A |
@@ -37,7 +37,7 @@
 
 ---
 
-### LC Biweekly Contests
+### LC Biweekly Contests (14)
 | # | Title | Status | Rank |
 | - | - | - | - |
 | BW126 | [Biweekly Contest 126](BW126/) | AC | N/A |

@@ -1,13 +1,20 @@
+"""
+author: Jie Chen (3rd Year CS)
+school: Rochester Institute of Technology
+status: AC
+"""
 #!/usr/bin/env python
 import argparse
 import subprocess as sp
 import os
 import pyperclip as pp
 from fetcher import Fetcher
+from organizer import Organizer
 
 class Maker:
     def __init__(self):
         self.fetcher = Fetcher()
+        self.organizer = Organizer()
         self.PROBLEM_DIR = "Problem"
         self.CONTEST_DIR = "Contest"
         self.CONTEST_PRE = self.fetcher.CONTEST_PRE
@@ -45,11 +52,10 @@ class Maker:
                     print(f"{name} has been created and {path} is copied to your clipboard.")
                 pp.copy(path)
                 path_no_pre = path[len(self.PROBLEM_DIR) + 1: ]
-                with open(f"{self.PROBLEM_DIR}/README.MD", "a+") as fp:
-                    fp.seek(0)
-                    info = fp.read()
-                    if pid not in info:
-                        fp.write(f"\n| {pid} | [{name}]({path_no_pre}) | WA |")
+
+                readme_path = f"{self.PROBLEM_DIR}/README.MD"
+                prob_format = f"| {pid} | [{name}]({path_no_pre}) | WA |"
+                self.organizer.add(readme_path, name, prob_format)
             case "C":
                 name, path = self.contest_parse(link)
                 if os.path.exists(path):
@@ -63,11 +69,10 @@ class Maker:
                     print(f"{name} has been created and {path} is copied to your clipboard.")
                 pp.copy(path)
                 path_no_pre = path[len(self.CONTEST_DIR) + 1: ]
-                with open(f"{self.CONTEST_DIR}/README.MD", "a+") as fp:
-                    fp.seek(0)
-                    info = fp.read()
-                    if name not in info:
-                        fp.write(f"\n| {path_no_pre} | [{name}]({path_no_pre}/) | N/A | N/A |")
+
+                readme_path = f"{self.CONTEST_DIR}/README.MD"
+                prob_format = f"| {path_no_pre} | [{name}]({path_no_pre}/) | N/A | N/A |"
+                self.organizer.add(readme_path, name, prob_format)
             case "N/A":
                 print("Sorry we don't support this link or it's not valid.")
 
