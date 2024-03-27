@@ -27,7 +27,7 @@
 
 ---
 
-### Medium (33)
+### Medium (34)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
@@ -44,6 +44,7 @@
 | 375 | [Guess Number Higher or Lower II](Medium/P375) | WX |
 | 442 | [Find All Duplicates in an Array](Medium/P442) | WA |
 | 621 | [Task Scheduler](Medium/P621) | WX |
+| 713 | [Subarray Product Less Than K](Medium/P713) | WA |
 | 930 | [Binary Subarrays With Sum](Medium/P930) | AC |
 | 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
 | 1155 | [Number of Dice Rolls With Target Sum](Medium/P1155/) | AC |

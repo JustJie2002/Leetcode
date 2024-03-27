@@ -8,21 +8,26 @@ import requests
 class Fetcher:
     def __init__(self):
         self.PROBLEM_PRE = "https://leetcode.com/problems/"
-        self.PROBLEM_SUF = "/description/"
         self.CONTEST_PRE = "https://leetcode.com/contest/"
-        self.CONTEST_SUF = "/"
 
     def decide(self, link):
-        if link.startswith(self.PROBLEM_PRE) and link.endswith(self.PROBLEM_SUF):
+        if link.startswith(self.PROBLEM_PRE):
             return "P", self.fetch(link)
-        elif link.startswith(self.CONTEST_PRE) and link.endswith(self.CONTEST_SUF):
+        elif link.startswith(self.CONTEST_PRE):
             return "C", {}
         return "N/A", {}
+    
+    def _get(self, pre, link):
+        s_index = link.index(pre) + len(pre)
+        slug = ""
+        for i in range(s_index, len(link)):
+            if link[i] == '/':
+                break
+            slug += link[i]
+        return slug
 
     def fetch(self, link):
-        s_index = link.index(self.PROBLEM_PRE) + len(self.PROBLEM_PRE)
-        e_index = link.rindex(self.PROBLEM_SUF)
-        title_slug = link[s_index: e_index]
+        title_slug = self._get(self.PROBLEM_PRE, link)
 
         BASE = "https://leetcode.com/graphql"
 
@@ -48,7 +53,7 @@ class Fetcher:
         })
 
         if res.status_code != 200:
-            return -1
+            return None
 
         data = res.json()["data"]["question"]
         return data

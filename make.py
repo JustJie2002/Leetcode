@@ -1,9 +1,9 @@
+#!/usr/bin/env python
 """
 author: Jie Chen (3rd Year CS)
 school: Rochester Institute of Technology
 status: AC
 """
-#!/usr/bin/env python
 import argparse
 import subprocess as sp
 import os
@@ -20,8 +20,8 @@ class Maker:
         self.CONTEST_PRE = self.fetcher.CONTEST_PRE
 
     def contest_parse(self, link):
-        s_index = link.index(self.CONTEST_PRE) + len(self.CONTEST_PRE)
-        t, _, cid = link[s_index: -1].split("-")
+        contest_slug = self.fetcher._get(self.CONTEST_PRE, link)
+        t, _, cid = contest_slug.split("-")
         parts = [s.capitalize() for s in [t, _, cid]]
         name = " ".join(parts)
         match t:
@@ -37,19 +37,22 @@ class Maker:
 
         match t:
             case "P":
+                if data is None:
+                    print("Sorry we don't support this link or it's not valid.")
+                    return
                 pid = data["questionFrontendId"]
                 diff = data["difficulty"]
                 name = data["title"]
                 path = os.path.join(self.PROBLEM_DIR, diff, f"P{pid}")
                 if os.path.exists(path):
-                    print(f"You were already working on {name}.")
+                    print(f"You were already working on \"{name}\".")
                     print(f"{path} is copied to your clipboard.")
                 else:
                     sp.run(
                         args = f"cp -r {self.PROBLEM_DIR}/Temp {path}",
                         shell = True
                     )
-                    print(f"{name} has been created and {path} is copied to your clipboard.")
+                    print(f"\"{name}\" has been created and {path} is copied to your clipboard.")
                 pp.copy(path)
                 path_no_pre = path[len(self.PROBLEM_DIR) + 1: ]
 
@@ -59,14 +62,14 @@ class Maker:
             case "C":
                 name, path = self.contest_parse(link)
                 if os.path.exists(path):
-                    print(f"You were already working on {name}.")
+                    print(f"You were already working on \"{name}\".")
                     print(f"{path} is copied to your clipboard.")
                 else:
                     sp.run(
                         args = f"cp -r {self.CONTEST_DIR}/Temp {path}",
                         shell = True
                     )
-                    print(f"{name} has been created and {path} is copied to your clipboard.")
+                    print(f"\"{name}\" has been created and {path} is copied to your clipboard.")
                 pp.copy(path)
                 path_no_pre = path[len(self.CONTEST_DIR) + 1: ]
 
