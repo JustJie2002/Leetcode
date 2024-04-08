@@ -7,18 +7,25 @@
 
 ---
 
-### Easy (14)
+### Easy (22)
 | # | Title | Status |
 | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | AC |
-| 41 | [First Missing Positive](Hard/P41) | WA |
+| 58 | [Length of Last Word](Easy/P58) | WA |
 | 100 | [Same Tree](Easy/P100/) | AC |
+| 205 | [Isomorphic Strings](Easy/P205) | WA |
 | 206 | [Reverse Linked List](Easy/P206/) | WX |
 | 217 | [Contains Duplicate](Easy/P217/) | AC |
 | 228 | [Summary Ranges](Easy/P228/) | AC |
 | 234 | [Palindrome Linked List](Easy/P234/) | WX |
 | 872 | [Leaf-Similar Trees](Easy/P872/) | AC |
+| 1360 | [Number of Days Between Two Dates](Easy/P1360) | WA |
+| 1544 | [Make The String Great](Easy/P1544) | WA |
+| 1614 | [Maximum Nesting Depth of the Parentheses](Easy/P1614) | AC |
+| 1700 | [Number of Students Unable to Eat Lunch](Easy/P1700) | WA |
 | 1971 | [Find if Path Exists in Graph](Easy/P1971/) | AC |
+| 2423 | [Remove Letter To Equalize Frequency](Easy/P2423) | AC |
+| 2446 | [Determine if Two Events Have Conflict](Easy/P2446) | WA |
 | 2500 | [Delete Greatest Value in Each Row](Easy/P2500/) | WX |
 | 2506 | [Count Pairs Of Similar Strings](Easy/P2506/) | WX |
 | 2511 | [Maximum Enemy Forts That Can Be Captured](Easy/P2511/) | WX |
@@ -27,12 +34,13 @@
 
 ---
 
-### Medium (34)
+### Medium (46)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
 | 3 | [Longest Substring Without Repeating Characters](Medium/P3/) | WX |
 | 43 | [Multiply Strings](Medium/P43/) | AC |
+| 79 | [Word Search](Medium/P79) | WX |
 | 143 | [Reorder List](Medium/P143/) | WX |
 | 213 | [House Robber II](Medium/P213/) | AC |
 | 240 | [Search a 2D Matrix II](Medium/P240/) | WX |
@@ -42,51 +50,71 @@
 | 287 | [Find the Duplicate Number](Medium/P287) | WX |
 | 299 | [Bulls and Cows](Medium/P299) | WX |
 | 375 | [Guess Number Higher or Lower II](Medium/P375) | WX |
-| 442 | [Find All Duplicates in an Array](Medium/P442) | WA |
+| 442 | [Find All Duplicates in an Array](Medium/P442) | WX |
 | 621 | [Task Scheduler](Medium/P621) | WX |
-| 713 | [Subarray Product Less Than K](Medium/P713) | WA |
+| 713 | [Subarray Product Less Than K](Medium/P713) | WX |
+| 720 | [Longest Word in Dictionary](Medium/P720) | WX |
 | 930 | [Binary Subarrays With Sum](Medium/P930) | AC |
 | 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
+| 1123 | [Lowest Common Ancestor of Deepest Leaves](Medium/P1123) | WX |
 | 1155 | [Number of Dice Rolls With Target Sum](Medium/P1155/) | AC |
+| 1249 | [Minimum Remove to Make Valid Parentheses](Medium/P1249) | WX |
 | 1376 | [Time Needed to Inform All Employees](Medium/P1376) | AC |
+| 1497 | [Check If Array Pairs Are Divisible by k](Medium/P1497) | WX |
 | 1557 | [Minimum Number of Vertices to Reach All Nodes](Medium/P1557/) | AC |
+| 1584 | [Min Cost to Connect All Points](Medium/P1584) | WA |
 | 1669 | [Merge In Between Linked Lists](Medium/P1669) | WX |
 | 1976 | [Number of Ways to Arrive at Destination](Medium/P1976) | WX |
 | 2090 | [K Radius Subarray Averages](Medium/P2090) | AC |
 | 2212 | [Maximum Points in an Archery Competition](Medium/P2212/) | AC |
 | 2365 | [Task Scheduler II](Medium/P2365) | WX |
+| 2425 | [Bitwise XOR of All Pairings](Medium/P2425) | AC |
 | 2501 | [Longest Square Streak in an Array](Medium/P2501) | WX |
 | 2502 | [Design Memory Allocator](Medium/P2502) | WX |
 | 2507 | [Smallest Value After Replacing With Sum of Prime Factors](Medium/P2507) | WX |
 | 2512 | [Reward Top K Students](Medium/P2512) | WX |
 | 2513 | [Minimize the Maximum of Two Arrays](Medium/P2513) | WA |
+| 2662 | [Minimum Cost of a Path With Special Roads](Medium/P2662) | WX |
 | 2834 | [Find the Minimum Possible Sum of a Beautiful Array](Medium/P2834) | AC |
+| 2958 | [Length of Longest Subarray With at Most K Frequency](Medium/P2958) | WA |
+| 2962 | [Count Subarrays Where Max Element Appears at Least K Times](Medium/P2962) | WA |
 | 3084 | [Count Substrings Starting and Ending with Given Character](Medium/P3084) | WX |
 | 3085 | [Minimum Deletions to Make String K-Special](Medium/P3085) | WX |
 | 3091 | [Apply Operations to Make Sum of Array Greater Than or Equal to k](Medium/P3091) | AC |
+| 3106 | [Lexicographically Smallest String After Operations With Constraint](Medium/P3106) | WA |
 
 ---
 
-### Hard (22)
+### Hard (31)
 | # | Title | Status |
 | - | - | - |
+| 41 | [First Missing Positive](Hard/P41) | WA |
 | 84 | [Largest Rectangle in Histogram](Hard/P84) | AC |
 | 329 | [Longest Increasing Path in a Matrix](Hard/P329) | WX |
+| 678 | [Valid Parenthesis String](Medium/P678) | WA |
+| 691 | [Stickers to Spell Word](Hard/P691) | WA |
+| 715 | [Range Module](Hard/P715) | WA |
 | 719 | [Find K-th Smallest Pair Distance](Hard/P719) | WX |
 | 778 | [Swim in Rising Water](Hard/P778) | AC |
+| 801 | [Minimum Swaps To Make Sequences Increasing](Hard/P801) | WA |
 | 864 | [Shortest Path to Get All Keys](Hard/P864) | WX |
 | 936 | [Stamping The Sequence](Hard/P936) | WX |
+| 992 | [Subarrays with K Different Integers](Hard/P992) | WA |
 | 1420 | [Build Array Where You Can Find The Maximum Exactly K Comparisons](Hard/P1420/) | WX |
 | 1463 | [Cherry Pickup II](Hard/P1463) | WX |
+| 1531 | [String Compression II](Hard/P1531) | WA |
 | 1606 | [Find Servers That Handled Most Number of Requests](Hard/P1606/) | AC |
 | 1819 | [Number of Different Subsequences GCDs](Hard/P1819) | WA |
 | 1938 | [Maximum Genetic Difference Query](Hard/P1938) | WX |
 | 2318 | [Number of Distinct Roll Sequences](Hard/P2318) | WX |
 | 2421 | [Number of Good Paths](Hard/P2421) | WX |
+| 2444 | [Count Subarrays With Fixed Bounds](Hard/P2444) | WA |
 | 2503 | [Maximum Number of Points From Grid Queries](Hard/P2503) | WX |
 | 2508 | [Add Edges to Make Degrees of All Nodes Even](Hard/P2508) | WX |
 | 2509 | [Cycle Length Queries in a Tree](Hard/P2509) | WX |
 | 2514 | [Count Anagrams](Hard/P2514) | WX |
+| 2569 | [Handling Sum Queries After Update](Hard/P2569) | WA |
+| 2742 | [Painting the Walls](Hard/P2742) | WA |
 | 2809 | [Minimum Time to Make Array Sum At Most x](Hard/P2809) | WA |
 | 2851 | [String Transformation](Hard/P2851) | WX |
 | 3003 | [Maximize the Number of Partitions After Operations](Hard/P3003) | WA |

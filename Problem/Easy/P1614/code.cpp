@@ -1,26 +1,24 @@
 /********************************************
  * author : Jie Chen (3rd Year CS)
  * school : Rochester Institute of Technology
- * created: 03.26.2024 21:46:17
+ * created: 04.04.2024 01:58:11
 *********************************************/
 
 using i64 = long long;
 
 class Solution {
 public:
-    int numSubarrayProductLessThanK(vector<int>& a, int k) {
-        int n = a.size();
-
+    int maxDepth(string s) {
+        int open = 0;
         int ans = 0;
-        int p = 1;
-        for (int l = 0, r = 0; r < n; r++) {
-            p *= a[r];
-            while (l <= r && p >= k) {
-                p /= a[l++];
+        for (char c : s) {
+            if (c == '(') {
+                open++;
+            } else if (c == ')') {
+                open--;
             }
-            ans += r - l + 1;
+            ans = max(ans, open);
         }
-
         return ans;
     }
 };
