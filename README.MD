@@ -53,8 +53,15 @@ They are used to create directories for me and add the information into their re
   - README.MD
     - It must be in the same format as mine.
 - Contest (Folder)
+  - Temp (Folder)
+    - A.cpp
+    - B.cpp
+    - C.cpp
+    - D.cpp (these names are up to you)
   - README.MD
     - It must be in the same format as mine.
+
+For the README.MD in these 2 folders, you can reset those by deleting all entries under those tables, other than the key tables.
 
 You can use the script by:
 1. python3 make.py [problem_link]
