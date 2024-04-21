@@ -9,9 +9,10 @@
 
 ---
 
-### LC Weekly Contests (24)
+### LC Weekly Contests (25)
 | # | Title | Status | Rank |
 | - | - | - | - |
+| W394 | [Weekly Contest 394](W394/) | N/A | N/A |
 | W393 | [Weekly Contest 393](W393/) | IC + AC | 45 / 25245 |
 | W392 | [Weekly Contest 392](W392/) | IC + AC | 262 / 31677 |
 | W391 | [Weekly Contest 391](W391/) | IC + AC | 112 / 29947 |

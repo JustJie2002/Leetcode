@@ -1,19 +1,20 @@
 /********************************************
  * author : Jie Chen (3rd Year CS)
  * school : Rochester Institute of Technology
- * created: 03.02.2024 10:28:38
+ * created: 04.20.2024 20:53:56
 *********************************************/
 
 using i64 = long long;
 
 class Solution {
 public:
-    int minOperations(vector<int>& a, int k) {
+    int maxFreq(string s, int lim, int mi, int ma) {
+        int n = s.length();
+
+        map<string, int> freq;
         int ans = 0;
-        for (int x : a) {
-            if (x < k) {
-                ans++;
-            }
+        for (int i = 0; i < n - mi + 1; i++) {
+            
         }
         return ans;
     }

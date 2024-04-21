@@ -4,57 +4,6 @@
  * created: 03.02.2024 09:30:16
 *********************************************/
 
-string to_string(string s) {
-    return '"' + s + '"';
-}
-
-string to_string(const char* s) {
-    return to_string((string) s);
-}
-
-string to_string(bool b) {
-    return (b ? "true" : "false");
-}
-
-template <typename A, typename B>
-string to_string(pair<A, B> p) {
-    return "(" + to_string(p.first) + ", " + to_string(p.second) + ")";
-}
-
-template <typename A>
-string to_string(A v) {
-    bool first = true;
-    string res = "{";
-    for (const auto &x : v) {
-        if (!first) {
-            res += ", ";
-        }
-        first = false;
-        res += to_string(x);
-    }
-    res += "}";
-    return res;
-}
-
-void debug_out() { cout << endl; }
-
-template <typename Head, typename... Tail>
-void debug_out(Head H, Tail... T) {
-    cout << " " << to_string(H);
-    debug_out(T...);
-}
-
-// #define BROKEN_CODE
-
-#ifdef BROKEN_CODE
-    #define dbg(...) cout << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
-    #define dbp(...) cout << __VA_ARGS__ << "\n";
-#else
-    #define dbg(...) 10082002
-    #define dbp(...) "Gimme Internship"
-#endif
-
-// http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0200r0.html
 template<class Fun> class y_combinator_result {
     Fun fun_;
 public:
@@ -127,7 +76,6 @@ public:
                 if (c % 2 == 0 && free == 0) {
                     want_xor -= min(dif1, dif2);
                 }
-                dbg(cur, want_xor);
                 dp[cur][changed] = max(dp[cur][changed], want_xor + (a[cur] ^ k));
             }
             { // even # of c
@@ -135,7 +83,6 @@ public:
                 if (c % 2 == 1 && free == 0) {
                     no_xor -= min(dif1, dif2);
                 }
-                dbg(cur, no_xor);
                 dp[cur][changed] = max(dp[cur][changed], no_xor + a[cur]);
             }
             return dp[cur][changed];

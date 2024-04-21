@@ -18,9 +18,7 @@ public:
             i64 u = dequeue(pq);
             if (u >= k) break;
             i64 v = dequeue(pq);
-
             pq.push(u * 2 + v);
-
             ops++;
         }
 
