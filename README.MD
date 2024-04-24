@@ -16,7 +16,7 @@ I have 3 Leetcode accounts:
 
 I personally have 3 accounts because I really like to do leetcode contests and at times I would be very tired/sleepy or just not feeling it, that's when I will hop on those 2 smurf accounts. Here are some stats: \
 Problem Solved: <572><731><250><1553> (JustJie) \
-Contest Rating: <2552><2678><2538>
+Contest Rating: <2552><2735><2538>
 
 # Overview
 I will be splitting this repository into 2 parts:

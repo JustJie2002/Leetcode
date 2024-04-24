@@ -7,7 +7,7 @@
 
 ---
 
-### Easy (26)
+### Easy (27)
 | # | Title | Status |
 | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | AC |
@@ -21,6 +21,7 @@
 | 404 | [Sum of Left Leaves](Easy/P404) | WX |
 | 872 | [Leaf-Similar Trees](Easy/P872/) | AC |
 | 942 | [DI String Match](Easy/P942) | WA |
+| 1137 | [N-th Tribonacci Number](Easy/P1137) | WA |
 | 1360 | [Number of Days Between Two Dates](Easy/P1360) | WX |
 | 1544 | [Make The String Great](Easy/P1544) | WX |
 | 1614 | [Maximum Nesting Depth of the Parentheses](Easy/P1614) | AC |
@@ -39,7 +40,7 @@
 
 ---
 
-### Medium (60)
+### Medium (64)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
@@ -57,6 +58,7 @@
 | 275 | [H-Index II](Medium/P275) | WX |
 | 287 | [Find the Duplicate Number](Medium/P287) | WX |
 | 299 | [Bulls and Cows](Medium/P299) | WX |
+| 310 | [Minimum Height Trees](Medium/P310) | AC |
 | 375 | [Guess Number Higher or Lower II](Medium/P375) | WX |
 | 402 | [Remove K Digits](Medium/P402) | WX |
 | 442 | [Find All Duplicates in an Array](Medium/P442) | WX |
@@ -65,6 +67,7 @@
 | 623 | [Add One Row to Tree](Medium/P623) | WA |
 | 713 | [Subarray Product Less Than K](Medium/P713) | WX |
 | 720 | [Longest Word in Dictionary](Medium/P720) | WX |
+| 752 | [Open the Lock](Medium/P752) | WA |
 | 930 | [Binary Subarrays With Sum](Medium/P930) | AC |
 | 950 | [Reveal Cards In Increasing Order](Medium/P950) | WX |
 | 988 | [Smallest String Starting From Leaf](Medium/P988) | WA |
@@ -82,6 +85,7 @@
 | 1669 | [Merge In Between Linked Lists](Medium/P1669) | WX |
 | 1976 | [Number of Ways to Arrive at Destination](Medium/P1976) | WX |
 | 1992 | [Find All Groups of Farmland](Medium/P1992) | WA |
+| 2008 | [Maximum Earnings From Taxi](Medium/P2008) | WA |
 | 2090 | [K Radius Subarray Averages](Medium/P2090) | AC |
 | 2155 | [All Divisions With the Highest Score of a Binary Array](Medium/P2155) | WA |
 | 2212 | [Maximum Points in an Archery Competition](Medium/P2212/) | AC |
@@ -102,6 +106,7 @@
 | 3091 | [Apply Operations to Make Sum of Array Greater Than or Equal to k](Medium/P3091) | AC |
 | 3106 | [Lexicographically Smallest String After Operations With Constraint](Medium/P3106) | WX |
 | 3115 | [Maximum Prime Difference](Medium/P3115) | WX |
+| 3122 | [Minimum Number of Operations to Satisfy Conditions](Medium/P3122) | WA |
 
 ---
 
