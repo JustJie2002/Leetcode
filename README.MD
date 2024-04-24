@@ -15,8 +15,8 @@ I have 3 Leetcode accounts:
 - [TiredJie](https://leetcode.com/TiredJie/) (Smurf 2)
 
 I personally have 3 accounts because I really like to do leetcode contests and at times I would be very tired/sleepy or just not feeling it, that's when I will hop on those 2 smurf accounts. Here are some stats: \
-Problem Solved: <572><731><250><1553> (JustJie) \
-Contest Rating: <2552><2735><2538>
+Problem Solved: <span style="color:green">572</span> | <span style="color:orange">731</span> | <span style="color:red">250</span> | 1553 (JustJie) \
+Contest Rating: <span style="color:skyblue">2552</span> | <span style="color:skyblue">2735</span> | <span style="color:skyblue">2538</span>
 
 # Overview
 I will be splitting this repository into 2 parts:
