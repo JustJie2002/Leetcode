@@ -36,11 +36,11 @@ However, there might be times when the explanation is incomplete. That would onl
 For contest section, it's just going to be a storage area for my contest code and will not have explanation because it might or might not be well written.
 
 # Script used to Organize
-Notice that I have 3 python scripts in the source directory:
+Notice that I have 4 python scripts in the source directory:
 1. make.py
 2. fetcher.py
 3. organizer.py
-4. set.py (Todo)
+4. set.py
 
 They are used to create directories for me and add the information into their respective README.MD. In order to also use this, your directory must be in the following format
 
@@ -83,3 +83,9 @@ There will be 3 possibilities:
 1. You've never done such contest/problem, so the script will create the folder for you and have the path copied to your clipboard. What I like to do is just `code [path]` so I can immediately start coding it in my IDE (VSCode).
 2. You've already doen such contest/problem, the script will not create extra folder, it will just copy the path to your clipboard.
 3. Tell you the link is not good.
+
+After you've used make.py to create the row for the problem. There is another main script that I created to update the status of the README.MD in Problem directory based on problem id.
+
+You can use the script by: \
+python3 set.py [problem_id] [new_status] \
+new_status can be: AC, WX, and WA. Based off the key, you can update the script to your preference.
