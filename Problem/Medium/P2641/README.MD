@@ -1,5 +1,5 @@
 # Intuition
-
+Suppose we 
 
 # Approach
 
