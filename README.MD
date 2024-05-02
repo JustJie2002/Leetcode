@@ -3,7 +3,7 @@
 - [Overview](#overview)
   - [Problem](#problem)
   - [Contest](#contest)
-  - [Script used to Organize](#script-used-to-organize)
+- [Script used to Organize](#script-used-to-organize)
 
 # Introduction
 Hi! My name is Jie Chen and I'm currently studying @ RIT. \
@@ -35,11 +35,12 @@ However, there might be times when the explanation is incomplete. That would onl
 ## [Contest](Contest/)
 For contest section, it's just going to be a storage area for my contest code and will not have explanation because it might or might not be well written.
 
-## Script used to Organize
+# Script used to Organize
 Notice that I have 3 python scripts in the source directory:
 1. make.py
 2. fetcher.py
 3. organizer.py
+4. set.py (Todo)
 
 They are used to create directories for me and add the information into their respective README.MD. In order to also use this, your directory must be in the following format
 
@@ -68,7 +69,7 @@ You can use the script by:
 2. python3 make.py [contest_link]
 
 Examples:
-```
+```bash
 python3 make.py https://leetcode.com/problems/subarray-product-less-than-k/description/?envType=daily-question&envId=2024-03-27
 
 python3 make.py https://leetcode.com/problems/two-sum/
