@@ -7,7 +7,7 @@
 
 ---
 
-### Easy (29)
+### Easy (30)
 | # | Title | Status |
 | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | AC |
@@ -20,7 +20,7 @@
 | 234 | [Palindrome Linked List](Easy/P234/) | WX |
 | 404 | [Sum of Left Leaves](Easy/P404) | WX |
 | 872 | [Leaf-Similar Trees](Easy/P872/) | AC |
-| 942 | [DI String Match](Easy/P942) | WA |
+| 942 | [DI String Match](Easy/P942) | WX |
 | 1137 | [N-th Tribonacci Number](Easy/P1137) | WA |
 | 1360 | [Number of Days Between Two Dates](Easy/P1360) | WX |
 | 1544 | [Make The String Great](Easy/P1544) | WX |
@@ -36,13 +36,14 @@
 | 2500 | [Delete Greatest Value in Each Row](Easy/P2500/) | WX |
 | 2506 | [Count Pairs Of Similar Strings](Easy/P2506/) | WX |
 | 2511 | [Maximum Enemy Forts That Can Be Captured](Easy/P2511/) | WX |
+| 2639 | [Find the Width of Columns of a Grid](Easy/P2639) | WA |
 | 3083 | [Existence of a Substring in a String and Its Reverse](Easy/P3083/) | WX |
 | 3090 | [Maximum Length Substring With Two Occurrence](Easy/P3090/) | WX |
 | 3114 | [Latest Time You Can Obtain After Replacing Characters](Easy/P3114) | WX |
 
 ---
 
-### Medium (70)
+### Medium (73)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
@@ -52,6 +53,7 @@
 | 106 | [Construct Binary Tree from Inorder and Postorder Traversal](Medium/P106) | WA |
 | 129 | [Sum Root to Leaf Numbers](Medium/P129) | WX |
 | 143 | [Reorder List](Medium/P143/) | WX |
+| 165 | [Compare Version Numbers](Medium/P165) | WA |
 | 172 | [Factorial Trailing Zeroes](Medium/P172) | WA |
 | 200 | [Number of Islands](Medium/P200) | WA |
 | 213 | [House Robber II](Medium/P213/) | AC |
@@ -72,6 +74,7 @@
 | 713 | [Subarray Product Less Than K](Medium/P713) | WX |
 | 720 | [Longest Word in Dictionary](Medium/P720) | WX |
 | 752 | [Open the Lock](Medium/P752) | WA |
+| 881 | [Boats to Save People](Medium/P881) | WA |
 | 930 | [Binary Subarrays With Sum](Medium/P930) | AC |
 | 950 | [Reveal Cards In Increasing Order](Medium/P950) | WX |
 | 988 | [Smallest String Starting From Leaf](Medium/P988) | WA |
@@ -105,6 +108,7 @@
 | 2641 | [Cousins in Binary Tree II](Medium/P2641) | WA |
 | 2662 | [Minimum Cost of a Path With Special Roads](Medium/P2662) | WX |
 | 2834 | [Find the Minimum Possible Sum of a Beautiful Array](Medium/P2834) | AC |
+| 2904 | [Shortest and Lexicographically Smallest Beautiful String](Medium/P2904) | WA |
 | 2958 | [Length of Longest Subarray With at Most K Frequency](Medium/P2958) | WX |
 | 2962 | [Count Subarrays Where Max Element Appears at Least K Times](Medium/P2962) | WX |
 | 2997 | [Minimum Number of Operations to Make Array XOR Equal to K](Medium/P2997) | WA |
@@ -118,11 +122,12 @@
 
 ---
 
-### Hard (41)
+### Hard (43)
 | # | Title | Status |
 | - | - | - |
 | 41 | [First Missing Positive](Hard/P41) | WX |
 | 42 | [Trapping Rain Water](Hard/P42) | WX |
+| 65 | [Valid Number](Hard/P65) | WX |
 | 84 | [Largest Rectangle in Histogram](Hard/P84) | AC |
 | 85 | [Maximal Rectangle](Hard/P85) | WX |
 | 329 | [Longest Increasing Path in a Matrix](Hard/P329) | WX |
@@ -162,3 +167,4 @@
 | 3049 | [Earliest Second to Mark Indices II](Hard/P3049) | WX |
 | 3093 | [Longest Common Suffix Queries](Hard/P3093) | WX |
 | 3113 | [Find the Number of Subarrays Where Boundary Elements Are Maximum](Hard/P3113) | WX |
+| 3123 | [Find Edges in Shortest Paths](Hard/P3123) | WX |

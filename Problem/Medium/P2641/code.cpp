@@ -39,7 +39,6 @@ public:
                 auto rt = q.front();
                 q.pop();
 
-                sum.back() += rt->val;
                 for (auto subtree : {rt->left, rt->right}) {
                     if (subtree) {
                         q.push(subtree);
@@ -72,6 +71,7 @@ public:
                 dfs(tr->right, rt->right, rt, depth + 1);
             }
         })(tr, root, nullptr, 0);
+
         return tr;
     }
 };
