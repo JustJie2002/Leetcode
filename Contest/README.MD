@@ -9,9 +9,10 @@
 
 ---
 
-### LC Weekly Contests (26)
+### LC Weekly Contests (28)
 | # | Title | Status | Rank |
 | - | - | - | - |
+| W396 | [Weekly Contest 396](W396/) | N/A | N/A |
 | W395 | [Weekly Contest 395](W395/) | N/A | N/A |
 | W394 | [Weekly Contest 394](W394/) | N/A | N/A |
 | W393 | [Weekly Contest 393](W393/) | IC + AC | 45 / 25245 |
@@ -38,12 +39,14 @@
 | W359 | [Weekly Contest 359](W359/) | IC + AC | 110 / 27133 |
 | W267 | [Weekly Contest 267](W267/) | AC | N/A |
 | W266 | [Weekly Contest 266](W266/) | AC | N/A |
+| W203 | [Weekly Contest 203](W203/) | N/A | N/A |
 
 ---
 
-### LC Biweekly Contests (19)
+### LC Biweekly Contests (20)
 | # | Title | Status | Rank |
 | - | - | - | - |
+| BW130 | [Biweekly Contest 130](BW130/) | N/A | N/A |
 | BW129 | [Biweekly Contest 129](BW129/) | N/A | N/A |
 | BW128 | [Biweekly Contest 128](BW128/) | N/A | N/A |
 | BW127 | [Biweekly Contest 127](BW127/) | N/A | N/A |

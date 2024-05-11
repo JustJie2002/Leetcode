@@ -7,7 +7,7 @@
 
 ---
 
-### Easy (30)
+### Easy (31)
 | # | Title | Status |
 | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | AC |
@@ -19,6 +19,7 @@
 | 228 | [Summary Ranges](Easy/P228/) | AC |
 | 234 | [Palindrome Linked List](Easy/P234/) | WX |
 | 404 | [Sum of Left Leaves](Easy/P404) | WX |
+| 506 | [Relative Ranks](Easy/P506) | WA |
 | 872 | [Leaf-Similar Trees](Easy/P872/) | AC |
 | 942 | [DI String Match](Easy/P942) | WX |
 | 1137 | [N-th Tribonacci Number](Easy/P1137) | WA |
@@ -43,7 +44,7 @@
 
 ---
 
-### Medium (73)
+### Medium (80)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
@@ -57,6 +58,7 @@
 | 172 | [Factorial Trailing Zeroes](Medium/P172) | WA |
 | 200 | [Number of Islands](Medium/P200) | WA |
 | 213 | [House Robber II](Medium/P213/) | AC |
+| 237 | [Delete Node in a Linked List](Medium/P237) | WX |
 | 240 | [Search a 2D Matrix II](Medium/P240/) | WX |
 | 249 | [Group Shifted Strings](Medium/P249) | WX |
 | 274 | [H-Index](Medium/P274) | WX |
@@ -71,12 +73,14 @@
 | 467 | [Unique Substrings in Wraparound String](Medium/P467) | WA |
 | 621 | [Task Scheduler](Medium/P621) | WX |
 | 623 | [Add One Row to Tree](Medium/P623) | WA |
+| 655 | [Print Binary Tree](Medium/P655) | WA |
 | 713 | [Subarray Product Less Than K](Medium/P713) | WX |
 | 720 | [Longest Word in Dictionary](Medium/P720) | WX |
 | 752 | [Open the Lock](Medium/P752) | WA |
 | 881 | [Boats to Save People](Medium/P881) | WA |
 | 930 | [Binary Subarrays With Sum](Medium/P930) | AC |
 | 950 | [Reveal Cards In Increasing Order](Medium/P950) | WX |
+| 955 | [Delete Columns to Make Sorted II](Medium/P955) | WA |
 | 988 | [Smallest String Starting From Leaf](Medium/P988) | WA |
 | 1004 | [Max Consecutive Ones III](Medium/P1004) | WA |
 | 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
@@ -97,16 +101,20 @@
 | 2090 | [K Radius Subarray Averages](Medium/P2090) | AC |
 | 2155 | [All Divisions With the Highest Score of a Binary Array](Medium/P2155) | WA |
 | 2212 | [Maximum Points in an Archery Competition](Medium/P2212/) | AC |
+| 2316 | [Count Unreachable Pairs of Nodes in an Undirected Graph](Medium/P2316) | WA |
 | 2365 | [Task Scheduler II](Medium/P2365) | WX |
 | 2370 | [Longest Ideal Subsequence](Medium/P2370) | WA |
 | 2425 | [Bitwise XOR of All Pairings](Medium/P2425) | AC |
+| 2487 | [Remove Nodes From Linked List](Medium/P2487) | WA |
 | 2501 | [Longest Square Streak in an Array](Medium/P2501) | WX |
 | 2502 | [Design Memory Allocator](Medium/P2502) | WX |
 | 2507 | [Smallest Value After Replacing With Sum of Prime Factors](Medium/P2507) | WX |
 | 2512 | [Reward Top K Students](Medium/P2512) | WX |
 | 2513 | [Minimize the Maximum of Two Arrays](Medium/P2513) | WA |
 | 2641 | [Cousins in Binary Tree II](Medium/P2641) | WA |
+| 2645 | [Minimum Additions to Make Valid String](Medium/P2645) | WX |
 | 2662 | [Minimum Cost of a Path With Special Roads](Medium/P2662) | WX |
+| 2816 | [Double a Number Represented as a Linked List](Medium/P2816) | WA |
 | 2834 | [Find the Minimum Possible Sum of a Beautiful Array](Medium/P2834) | AC |
 | 2904 | [Shortest and Lexicographically Smallest Beautiful String](Medium/P2904) | WA |
 | 2958 | [Length of Longest Subarray With at Most K Frequency](Medium/P2958) | WX |
@@ -122,7 +130,7 @@
 
 ---
 
-### Hard (43)
+### Hard (49)
 | # | Title | Status |
 | - | - | - |
 | 41 | [First Missing Positive](Hard/P41) | WX |
@@ -131,18 +139,22 @@
 | 84 | [Largest Rectangle in Histogram](Hard/P84) | AC |
 | 85 | [Maximal Rectangle](Hard/P85) | WX |
 | 329 | [Longest Increasing Path in a Matrix](Hard/P329) | WX |
+| 502 | [IPO](Hard/P502) | WA |
 | 514 | [Freedom Trail](Hard/P514) | WA |
 | 678 | [Valid Parenthesis String](Medium/P678) | WX |
 | 691 | [Stickers to Spell Word](Hard/P691) | WX |
 | 715 | [Range Module](Hard/P715) | WX |
 | 719 | [Find K-th Smallest Pair Distance](Hard/P719) | WX |
+| 759 | [Employee Free Time](Hard/P759) | WA |
 | 778 | [Swim in Rising Water](Hard/P778) | AC |
 | 801 | [Minimum Swaps To Make Sequences Increasing](Hard/P801) | WX |
 | 834 | [Sum of Distances in Tree](Hard/P834) | WA |
+| 857 | [Minimum Cost to Hire K Workers](Hard/P857) | WA |
 | 864 | [Shortest Path to Get All Keys](Hard/P864) | WX |
 | 936 | [Stamping The Sequence](Hard/P936) | WX |
 | 982 | [Triples with Bitwise AND Equal To Zero](Hard/P982) | WA |
 | 992 | [Subarrays with K Different Integers](Hard/P992) | WX |
+| 1125 | [Smallest Sufficient Team](Hard/P1125) | WA |
 | 1289 | [Minimum Falling Path Sum II](Hard/P1289) | WA |
 | 1420 | [Build Array Where You Can Find The Maximum Exactly K Comparisons](Hard/P1420/) | WX |
 | 1463 | [Cherry Pickup II](Hard/P1463) | WX |
@@ -159,9 +171,11 @@
 | 2509 | [Cycle Length Queries in a Tree](Hard/P2509) | WX |
 | 2514 | [Count Anagrams](Hard/P2514) | WX |
 | 2569 | [Handling Sum Queries After Update](Hard/P2569) | WA |
+| 2642 | [Design Graph With Shortest Path Calculator](Hard/P2642) | WA |
 | 2742 | [Painting the Walls](Hard/P2742) | WX |
 | 2809 | [Minimum Time to Make Array Sum At Most x](Hard/P2809) | WX |
 | 2851 | [String Transformation](Hard/P2851) | WX |
+| 2973 | [Find Number of Coins to Place in Tree Nodes](Hard/P2973) | WA |
 | 3003 | [Maximize the Number of Partitions After Operations](Hard/P3003) | WX |
 | 3017 | [Count the Number of Houses at a Certain Distance II](Hard/P3017) | WA |
 | 3049 | [Earliest Second to Mark Indices II](Hard/P3049) | WX |
