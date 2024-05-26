@@ -7,7 +7,7 @@
 
 ---
 
-### Easy (31)
+### Easy (34)
 | # | Title | Status |
 | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | AC |
@@ -18,6 +18,8 @@
 | 217 | [Contains Duplicate](Easy/P217/) | AC |
 | 228 | [Summary Ranges](Easy/P228/) | AC |
 | 234 | [Palindrome Linked List](Easy/P234/) | WX |
+| 278 | [First Bad Version](Easy/P278) | WA |
+| 290 | [Word Pattern](Easy/P290) | WA |
 | 404 | [Sum of Left Leaves](Easy/P404) | WX |
 | 506 | [Relative Ranks](Easy/P506) | WA |
 | 872 | [Leaf-Similar Trees](Easy/P872/) | AC |
@@ -27,6 +29,7 @@
 | 1544 | [Make The String Great](Easy/P1544) | WX |
 | 1614 | [Maximum Nesting Depth of the Parentheses](Easy/P1614) | AC |
 | 1700 | [Number of Students Unable to Eat Lunch](Easy/P1700) | WX |
+| 1935 | [Maximum Number of Words You Can Type](Easy/P1935) | WA |
 | 1945 | [Sum of Digits of String After Convert](Easy/P1945) | WA |
 | 1971 | [Find if Path Exists in Graph](Easy/P1971/) | AC |
 | 2000 | [Reverse Prefix of Word](Easy/P2000) | WA |
@@ -44,12 +47,13 @@
 
 ---
 
-### Medium (80)
+### Medium (84)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
 | 3 | [Longest Substring Without Repeating Characters](Medium/P3/) | WX |
 | 43 | [Multiply Strings](Medium/P43/) | AC |
+| 78 | [Subsets](Medium/P78) | WA |
 | 79 | [Word Search](Medium/P79) | WX |
 | 106 | [Construct Binary Tree from Inorder and Postorder Traversal](Medium/P106) | WA |
 | 129 | [Sum Root to Leaf Numbers](Medium/P129) | WX |
@@ -81,6 +85,7 @@
 | 930 | [Binary Subarrays With Sum](Medium/P930) | AC |
 | 950 | [Reveal Cards In Increasing Order](Medium/P950) | WX |
 | 955 | [Delete Columns to Make Sorted II](Medium/P955) | WA |
+| 979 | [Distribute Coins in Binary Tree](Medium/P979) | WX |
 | 988 | [Smallest String Starting From Leaf](Medium/P988) | WA |
 | 1004 | [Max Consecutive Ones III](Medium/P1004) | WA |
 | 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
@@ -101,6 +106,7 @@
 | 2090 | [K Radius Subarray Averages](Medium/P2090) | AC |
 | 2155 | [All Divisions With the Highest Score of a Binary Array](Medium/P2155) | WA |
 | 2212 | [Maximum Points in an Archery Competition](Medium/P2212/) | AC |
+| 2225 | [Find Players With Zero or One Losses](Medium/P2225) | WA |
 | 2316 | [Count Unreachable Pairs of Nodes in an Undirected Graph](Medium/P2316) | WA |
 | 2365 | [Task Scheduler II](Medium/P2365) | WX |
 | 2370 | [Longest Ideal Subsequence](Medium/P2370) | WA |
@@ -127,10 +133,11 @@
 | 3106 | [Lexicographically Smallest String After Operations With Constraint](Medium/P3106) | WX |
 | 3115 | [Maximum Prime Difference](Medium/P3115) | WX |
 | 3122 | [Minimum Number of Operations to Satisfy Conditions](Medium/P3122) | WA |
+| 3152 | [Special Array II](Medium/P3152) | WA |
 
 ---
 
-### Hard (49)
+### Hard (54)
 | # | Title | Status |
 | - | - | - |
 | 41 | [First Missing Positive](Hard/P41) | WX |
@@ -139,8 +146,10 @@
 | 84 | [Largest Rectangle in Histogram](Hard/P84) | AC |
 | 85 | [Maximal Rectangle](Hard/P85) | WX |
 | 329 | [Longest Increasing Path in a Matrix](Hard/P329) | WX |
+| 446 | [Arithmetic Slices II - Subsequence](Hard/P446) | WA |
 | 502 | [IPO](Hard/P502) | WA |
 | 514 | [Freedom Trail](Hard/P514) | WA |
+| 564 | [Find the Closest Palindrome](Hard/P564) | WA |
 | 678 | [Valid Parenthesis String](Medium/P678) | WX |
 | 691 | [Stickers to Spell Word](Hard/P691) | WX |
 | 715 | [Range Module](Hard/P715) | WX |
@@ -149,6 +158,7 @@
 | 778 | [Swim in Rising Water](Hard/P778) | AC |
 | 801 | [Minimum Swaps To Make Sequences Increasing](Hard/P801) | WX |
 | 834 | [Sum of Distances in Tree](Hard/P834) | WA |
+| 843 | [Guess the Word](Hard/P843) | WA |
 | 857 | [Minimum Cost to Hire K Workers](Hard/P857) | WA |
 | 864 | [Shortest Path to Get All Keys](Hard/P864) | WX |
 | 936 | [Stamping The Sequence](Hard/P936) | WX |
@@ -161,8 +171,10 @@
 | 1531 | [String Compression II](Hard/P1531) | WA |
 | 1606 | [Find Servers That Handled Most Number of Requests](Hard/P1606/) | AC |
 | 1819 | [Number of Different Subsequences GCDs](Hard/P1819) | WX |
+| 1825 | [Finding MK Average](Hard/P1825) | WA |
 | 1938 | [Maximum Genetic Difference Query](Hard/P1938) | WX |
 | 2318 | [Number of Distinct Roll Sequences](Hard/P2318) | WX |
+| 2355 | [Maximum Number of Books You Can Take](Hard/P2355) | WA |
 | 2407 | [Longest Increasing Subsequence II](Hard/P2407) | WA |
 | 2421 | [Number of Good Paths](Hard/P2421) | WX |
 | 2444 | [Count Subarrays With Fixed Bounds](Hard/P2444) | WX |

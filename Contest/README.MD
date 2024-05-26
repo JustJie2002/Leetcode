@@ -9,9 +9,12 @@
 
 ---
 
-### LC Weekly Contests (28)
+### LC Weekly Contests (31)
 | # | Title | Status | Rank |
 | - | - | - | - |
+| W399 | [Weekly Contest 399](W399/) | N/A | N/A |
+| W398 | [Weekly Contest 398](W398/) | N/A | N/A |
+| W397 | [Weekly Contest 397](W397/) | N/A | N/A |
 | W396 | [Weekly Contest 396](W396/) | N/A | N/A |
 | W395 | [Weekly Contest 395](W395/) | N/A | N/A |
 | W394 | [Weekly Contest 394](W394/) | N/A | N/A |
@@ -43,9 +46,10 @@
 
 ---
 
-### LC Biweekly Contests (20)
+### LC Biweekly Contests (22)
 | # | Title | Status | Rank |
 | - | - | - | - |
+| BW131 | [Biweekly Contest 131](BW131/) | N/A | N/A |
 | BW130 | [Biweekly Contest 130](BW130/) | N/A | N/A |
 | BW129 | [Biweekly Contest 129](BW129/) | N/A | N/A |
 | BW128 | [Biweekly Contest 128](BW128/) | N/A | N/A |
@@ -66,3 +70,4 @@
 | BW79 | [Biweekly Contest 79](BW79/) | N/A | N/A |
 | BW78 | [Biweekly Contest 78](BW78/) | N/A | N/A |
 | BW75 | [Biweekly Contest 75](BW75/) | AC | N/A |
+| BW60 | [Biweekly Contest 60](BW60/) | N/A | N/A |
