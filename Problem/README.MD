@@ -48,7 +48,7 @@
 
 ---
 
-### Medium (90)
+### Medium (91)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
@@ -124,6 +124,7 @@
 | 2507 | [Smallest Value After Replacing With Sum of Prime Factors](Medium/P2507) | WX |
 | 2512 | [Reward Top K Students](Medium/P2512) | WX |
 | 2513 | [Minimize the Maximum of Two Arrays](Medium/P2513) | WA |
+| 2594 | [Minimum Time to Repair Cars](Medium/P2594) | WA |
 | 2641 | [Cousins in Binary Tree II](Medium/P2641) | WA |
 | 2645 | [Minimum Additions to Make Valid String](Medium/P2645) | WX |
 | 2662 | [Minimum Cost of a Path With Special Roads](Medium/P2662) | WX |
