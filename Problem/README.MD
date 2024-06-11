@@ -7,7 +7,7 @@
 
 ---
 
-### Easy (34)
+### Easy (35)
 | # | Title | Status |
 | - | - | - |
 | 1 | [Two Sum](Easy/P1/) | AC |
@@ -24,6 +24,7 @@
 | 506 | [Relative Ranks](Easy/P506) | WA |
 | 872 | [Leaf-Similar Trees](Easy/P872/) | AC |
 | 942 | [DI String Match](Easy/P942) | WX |
+| 1122 | [Relative Sort Array](Easy/P1122) | WA |
 | 1137 | [N-th Tribonacci Number](Easy/P1137) | WA |
 | 1360 | [Number of Days Between Two Dates](Easy/P1360) | WX |
 | 1544 | [Make The String Great](Easy/P1544) | WX |
@@ -47,12 +48,15 @@
 
 ---
 
-### Medium (84)
+### Medium (90)
 | # | Title | Status |
 | - | - | - |
 | 2 | [Add Two Numbers](Medium/P2/) | AC |
 | 3 | [Longest Substring Without Repeating Characters](Medium/P3/) | WX |
+| 17 | [Letter Combinations of a Phone Number](Medium/P17) | WA |
+| 39 | [Combination Sum](Medium/P39) | WA |
 | 43 | [Multiply Strings](Medium/P43/) | AC |
+| 46 | [Permutations](Medium/P46) | WA |
 | 78 | [Subsets](Medium/P78) | WA |
 | 79 | [Word Search](Medium/P79) | WX |
 | 106 | [Construct Binary Tree from Inorder and Postorder Traversal](Medium/P106) | WA |
@@ -86,6 +90,7 @@
 | 950 | [Reveal Cards In Increasing Order](Medium/P950) | WX |
 | 955 | [Delete Columns to Make Sorted II](Medium/P955) | WA |
 | 979 | [Distribute Coins in Binary Tree](Medium/P979) | WX |
+| 984 | [String Without AAA or BBB](Medium/P984) | WA |
 | 988 | [Smallest String Starting From Leaf](Medium/P988) | WA |
 | 1004 | [Max Consecutive Ones III](Medium/P1004) | WA |
 | 1043 | [Partition Array for Maximum Sum](Medium/P1043/) | AC |
@@ -94,7 +99,9 @@
 | 1186 | [Maximum Subarray Sum with One Deletion](Medium/P1186) | WX |
 | 1249 | [Minimum Remove to Make Valid Parentheses](Medium/P1249) | WX |
 | 1297 | [Maximum Number of Occurrences of a Substring](Medium/P1297) | WA |
+| 1334 | [Find the City With the Smallest Number of Neighbors at a Threshold Distance](Medium/P1334) | WA |
 | 1376 | [Time Needed to Inform All Employees](Medium/P1376) | AC |
+| 1442 | [Count Triplets That Can Form Two Arrays of Equal XOR](Medium/P1442) | WA |
 | 1497 | [Check If Array Pairs Are Divisible by k](Medium/P1497) | WX |
 | 1557 | [Minimum Number of Vertices to Reach All Nodes](Medium/P1557/) | AC |
 | 1584 | [Min Cost to Connect All Points](Medium/P1584) | WA |
@@ -137,7 +144,7 @@
 
 ---
 
-### Hard (54)
+### Hard (56)
 | # | Title | Status |
 | - | - | - |
 | 41 | [First Missing Positive](Hard/P41) | WX |
@@ -145,6 +152,7 @@
 | 65 | [Valid Number](Hard/P65) | WX |
 | 84 | [Largest Rectangle in Histogram](Hard/P84) | AC |
 | 85 | [Maximal Rectangle](Hard/P85) | WX |
+| 327 | [Count of Range Sum](Hard/P327) | WA |
 | 329 | [Longest Increasing Path in a Matrix](Hard/P329) | WX |
 | 446 | [Arithmetic Slices II - Subsequence](Hard/P446) | WA |
 | 502 | [IPO](Hard/P502) | WA |
@@ -166,6 +174,7 @@
 | 992 | [Subarrays with K Different Integers](Hard/P992) | WX |
 | 1125 | [Smallest Sufficient Team](Hard/P1125) | WA |
 | 1289 | [Minimum Falling Path Sum II](Hard/P1289) | WA |
+| 1307 | [Verbal Arithmetic Puzzle](Hard/P1307) | WA |
 | 1420 | [Build Array Where You Can Find The Maximum Exactly K Comparisons](Hard/P1420/) | WX |
 | 1463 | [Cherry Pickup II](Hard/P1463) | WX |
 | 1531 | [String Compression II](Hard/P1531) | WA |
