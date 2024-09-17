@@ -9,9 +9,19 @@
 
 ---
 
-### LC Weekly Contests (33)
+### LC Weekly Contests (44)
 | # | Title | Status | Rank |
 | - | - | - | - |
+| W415 | [Weekly Contest 415](W415/) | N/A | N/A |
+| W413 | [Weekly Contest 413](W413/) | N/A | N/A |
+| W412 | [Weekly Contest 412](W412/) | N/A | N/A |
+| W410 | [Weekly Contest 410](W410/) | N/A | N/A |
+| W408 | [Weekly Contest 408](W408/) | N/A | N/A |
+| W407 | [Weekly Contest 407](W407/) | N/A | N/A |
+| W406 | [Weekly Contest 406](W406/) | N/A | N/A |
+| W405 | [Weekly Contest 405](W405/) | N/A | N/A |
+| W404 | [Weekly Contest 404](W404/) | N/A | N/A |
+| W402 | [Weekly Contest 402](W402/) | N/A | N/A |
 | W401 | [Weekly Contest 401](W401/) | N/A | N/A |
 | W400 | [Weekly Contest 400](W400/) | AK | N/A |
 | W399 | [Weekly Contest 399](W399/) | IC + AK | 106 / 32166 |
@@ -42,15 +52,20 @@
 | W374 | [Weekly Contest 374](W374/) | IC + WA + AK | 237 / 19630 |
 | W373 | [Weekly Contest 373](W373/) | IC + WA + AK | 438 / 18459 |
 | W359 | [Weekly Contest 359](W359/) | IC + AK | 110 / 27133 |
+| W344 | [Weekly Contest 344](W344/) | N/A | N/A |
 | W267 | [Weekly Contest 267](W267/) | AK | N/A |
 | W266 | [Weekly Contest 266](W266/) | AK | N/A |
 | W203 | [Weekly Contest 203](W203/) | N/A | N/A |
 
 ---
 
-### LC Biweekly Contests (23)
+### LC Biweekly Contests (28)
 | # | Title | Status | Rank |
 | - | - | - | - |
+| BW139 | [Biweekly Contest 139](BW139/) | N/A | N/A |
+| BW137 | [Biweekly Contest 137](BW137/) | N/A | N/A |
+| BW135 | [Biweekly Contest 135](BW135/) | N/A | N/A |
+| BW134 | [Biweekly Contest 134](BW134/) | N/A | N/A |
 | BW131 | [Biweekly Contest 131](BW131/) | AK | N/A |
 | BW130 | [Biweekly Contest 130](BW130/) | AK | N/A |
 | BW129 | [Biweekly Contest 129](BW129/) | N/A | N/A |
@@ -65,6 +80,7 @@
 | BW119 | [Biweekly Contest 119](BW119/) | IC + AK | 921 / 17707 |
 | BW118 | [Biweekly Contest 118](BW118/) | AK | N/A |
 | BW95 | [Biweekly Contest 95](BW95/) | N/A | N/A |
+| BW88 | [Biweekly Contest 88](BW88/) | N/A | N/A |
 | BW87 | [Biweekly Contest 87](BW87/) | AK | N/A |
 | BW86 | [Biweekly Contest 86](BW86/) | AK | N/A |
 | BW85 | [Biweekly Contest 85](BW85/) | AK | N/A |

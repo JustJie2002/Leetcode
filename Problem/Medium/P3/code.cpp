@@ -6,25 +6,25 @@
 
 using i64 = long long;
 
-constexpr int A = 255;
+constexpr int ASCII = 255;
 
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         int n = s.length();
 
-        vector<int> prev(A, -1);
-        int l = 0, ans = 0;
-        for (int r = 0; r < n; r++) {
+        vector<int> pre_pos(ASCII, -1);
+        int ans = 0;
+        for (int l = 0, r = 0; r < n; r++) {
             char c = s[r];
-            if (prev[c] != -1) {
-                int up_to = prev[c];
+            if (pre_pos[c] != -1) {
+                int up_to = pre_pos[c];
                 while (l <= up_to) {
-                    prev[s[l]] = -1;
+                    pre_pos[s[l]] = -1;
                     l++;
                 }
             }
-            prev[c] = r;
+            pre_pos[c] = r;
             ans = max(ans, r - l + 1);
         }
 

@@ -12,7 +12,7 @@ public:
         int n = a.size();
 
         vector<int> lesser_left(n, -1);
-        stack<int> stk;
+        vector<int> stk;
         for (int i = 0; i < n; i++) {
             while (!stk.empty() && a[stk.top()] >= a[i]) {
                 stk.pop();
@@ -38,7 +38,6 @@ public:
 
         int ans = 0;
         for (int i = 0; i < n; i++) {
-            dbg((lesser_right[i] - lesser_left[i]) * a[i]);
             ans = max(ans, (lesser_right[i] - lesser_left[i] - 1) * a[i]);
         }
         return ans;
